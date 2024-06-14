@@ -139,8 +139,14 @@ class MagbotDisplayNode(Node):
             self.disp.clear()
             self.disp.module_exit()
 
-
-if __name__ == "__main__":
+def main(args=None):
+    rclpy.init(args=args)
+    
     node = MagbotDisplayNode()
     node.get_logger().info("Display node started, outputting to display")
     node.loop()
+
+    rclpy.shutdown()
+
+if __name__ == "__main__":
+    main()

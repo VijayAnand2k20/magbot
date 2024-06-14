@@ -1,0 +1,51 @@
+[0.000000] (-) TimerEvent: {}
+[0.000151] (magbot) JobQueued: {'identifier': 'magbot', 'dependencies': OrderedDict()}
+[0.000185] (magbot_control) JobQueued: {'identifier': 'magbot_control', 'dependencies': OrderedDict()}
+[0.000207] (magbot_description) JobQueued: {'identifier': 'magbot_description', 'dependencies': OrderedDict()}
+[0.000227] (magbot_gazebo) JobQueued: {'identifier': 'magbot_gazebo', 'dependencies': OrderedDict()}
+[0.000245] (magbot_input_interfacing) JobQueued: {'identifier': 'magbot_input_interfacing', 'dependencies': OrderedDict()}
+[0.000263] (magbot_peripheral_interfacing) JobQueued: {'identifier': 'magbot_peripheral_interfacing', 'dependencies': OrderedDict()}
+[0.000280] (magbot_servo_interfacing) JobQueued: {'identifier': 'magbot_servo_interfacing', 'dependencies': OrderedDict()}
+[0.000299] (magbot_utilities) JobQueued: {'identifier': 'magbot_utilities', 'dependencies': OrderedDict()}
+[0.000317] (magbot) JobStarted: {'identifier': 'magbot'}
+[0.012456] (magbot_control) JobStarted: {'identifier': 'magbot_control'}
+[0.026208] (magbot_description) JobStarted: {'identifier': 'magbot_description'}
+[0.033231] (magbot_gazebo) JobStarted: {'identifier': 'magbot_gazebo'}
+[0.044863] (magbot_input_interfacing) JobStarted: {'identifier': 'magbot_input_interfacing'}
+[0.053243] (magbot_peripheral_interfacing) JobStarted: {'identifier': 'magbot_peripheral_interfacing'}
+[0.063276] (magbot_servo_interfacing) JobStarted: {'identifier': 'magbot_servo_interfacing'}
+[0.069935] (magbot_utilities) JobStarted: {'identifier': 'magbot_utilities'}
+[0.099123] (-) TimerEvent: {}
+[0.199490] (-) TimerEvent: {}
+[0.299906] (-) TimerEvent: {}
+[0.400208] (-) TimerEvent: {}
+[0.500469] (-) TimerEvent: {}
+[0.600801] (-) TimerEvent: {}
+[0.701151] (-) TimerEvent: {}
+[0.801451] (-) TimerEvent: {}
+[0.901768] (-) TimerEvent: {}
+[1.002149] (-) TimerEvent: {}
+[1.102424] (-) TimerEvent: {}
+[1.202718] (-) TimerEvent: {}
+[1.303011] (-) TimerEvent: {}
+[1.403317] (-) TimerEvent: {}
+[1.503582] (-) TimerEvent: {}
+[1.603873] (-) TimerEvent: {}
+[1.704167] (-) TimerEvent: {}
+[1.804466] (-) TimerEvent: {}
+[1.904749] (-) TimerEvent: {}
+[2.005042] (-) TimerEvent: {}
+[2.070357] (magbot_peripheral_interfacing) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 51, in build\n    setup_py_data = get_setup_data(self.context.pkg, env)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/__init__.py", line 20, in get_setup_data\n    return dict(pkg.metadata[key](env))\n  File "/usr/lib/python3/dist-packages/colcon_ros/package_augmentation/ros_ament_python.py", line 57, in getter\n    return get_setup_information(\n  File "/usr/lib/python3/dist-packages/colcon_python_setup_py/package_identification/python_setup_py.py", line 241, in get_setup_information\n    _setup_information_cache[hashable_env] = _get_setup_information(\n  File "/usr/lib/python3/dist-packages/colcon_python_setup_py/package_identification/python_setup_py.py", line 288, in _get_setup_information\n    result = subprocess.run(\n  File "/usr/lib/python3.10/subprocess.py", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command \'[\'/usr/bin/python3\', \'-c\', \'import sys;from contextlib import suppress;exec("with suppress(ImportError):    from setuptools.extern.packaging.specifiers    import SpecifierSet");exec("with suppress(ImportError):    from packaging.specifiers import SpecifierSet");from distutils.core import run_setup;dist = run_setup(    \\\'setup.py\\\', script_args=(\\\'--dry-run\\\',), stop_after=\\\'config\\\');skip_keys = (\\\'cmdclass\\\', \\\'distclass\\\', \\\'ext_modules\\\', \\\'metadata\\\');data = {    key: value for key, value in dist.__dict__.items()     if (        not key.startswith(\\\'_\\\') and         not callable(value) and         key not in skip_keys and         key not in dist.display_option_names    )};data[\\\'metadata\\\'] = {    k: v for k, v in dist.metadata.__dict__.items()     if k not in (\\\'license_files\\\', \\\'provides_extras\\\')};sys.stdout.buffer.write(repr(data).encode(\\\'utf-8\\\'))\']\' returned non-zero exit status 1.\n'}
+[2.071214] (magbot_peripheral_interfacing) JobEnded: {'identifier': 'magbot_peripheral_interfacing', 'rc': 1}
+[2.105230] (-) TimerEvent: {}
+[2.205808] (-) TimerEvent: {}
+[2.306108] (-) TimerEvent: {}
+[2.398285] (magbot) JobEnded: {'identifier': 'magbot', 'rc': 'SIGINT'}
+[2.398802] (magbot_control) JobEnded: {'identifier': 'magbot_control', 'rc': 'SIGINT'}
+[2.399453] (magbot_description) JobEnded: {'identifier': 'magbot_description', 'rc': 'SIGINT'}
+[2.399906] (magbot_gazebo) JobEnded: {'identifier': 'magbot_gazebo', 'rc': 'SIGINT'}
+[2.400134] (magbot_input_interfacing) JobEnded: {'identifier': 'magbot_input_interfacing', 'rc': 'SIGINT'}
+[2.400354] (magbot_utilities) JobEnded: {'identifier': 'magbot_utilities', 'rc': 'SIGINT'}
+[2.400626] (magbot_servo_interfacing) JobEnded: {'identifier': 'magbot_servo_interfacing', 'rc': 'SIGINT'}
+[2.406212] (-) TimerEvent: {}
+[2.410271] (-) EventReactorShutdown: {}

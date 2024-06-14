@@ -1,0 +1,20 @@
+[3.947s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_input_interfacing': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_input_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/install.log --single-version-externally-managed install_data
+[4.761s] running egg_info
+[4.762s] writing ../../../build/magbot_input_interfacing/magbot_input_interfacing.egg-info/PKG-INFO
+[4.762s] writing dependency_links to ../../../build/magbot_input_interfacing/magbot_input_interfacing.egg-info/dependency_links.txt
+[4.762s] writing entry points to ../../../build/magbot_input_interfacing/magbot_input_interfacing.egg-info/entry_points.txt
+[4.762s] writing requirements to ../../../build/magbot_input_interfacing/magbot_input_interfacing.egg-info/requires.txt
+[4.763s] writing top-level names to ../../../build/magbot_input_interfacing/magbot_input_interfacing.egg-info/top_level.txt
+[4.763s] reading manifest file '../../../build/magbot_input_interfacing/magbot_input_interfacing.egg-info/SOURCES.txt'
+[4.763s] writing manifest file '../../../build/magbot_input_interfacing/magbot_input_interfacing.egg-info/SOURCES.txt'
+[4.763s] running build
+[4.763s] running build_py
+[4.764s] running install
+[4.764s] running install_lib
+[4.764s] running install_data
+[4.764s] running install_egg_info
+[4.764s] removing '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/lib/python3.10/site-packages/magbot_input_interfacing-0.0.0-py3.10.egg-info' (and everything under it)
+[4.764s] Copying ../../../build/magbot_input_interfacing/magbot_input_interfacing.egg-info to /home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/lib/python3.10/site-packages/magbot_input_interfacing-0.0.0-py3.10.egg-info
+[4.764s] running install_scripts
+[4.803s] writing list of installed files to '/home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/install.log'
+[4.963s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_input_interfacing' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_input_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/install.log --single-version-externally-managed install_data
