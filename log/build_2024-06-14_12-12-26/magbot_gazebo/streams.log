@@ -1,0 +1,20 @@
+[4.744s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_gazebo': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_gazebo build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/install.log --single-version-externally-managed install_data
+[5.738s] running egg_info
+[5.741s] writing ../../build/magbot_gazebo/magbot_gazebo.egg-info/PKG-INFO
+[5.741s] writing dependency_links to ../../build/magbot_gazebo/magbot_gazebo.egg-info/dependency_links.txt
+[5.741s] writing entry points to ../../build/magbot_gazebo/magbot_gazebo.egg-info/entry_points.txt
+[5.742s] writing requirements to ../../build/magbot_gazebo/magbot_gazebo.egg-info/requires.txt
+[5.742s] writing top-level names to ../../build/magbot_gazebo/magbot_gazebo.egg-info/top_level.txt
+[5.749s] reading manifest file '../../build/magbot_gazebo/magbot_gazebo.egg-info/SOURCES.txt'
+[5.759s] writing manifest file '../../build/magbot_gazebo/magbot_gazebo.egg-info/SOURCES.txt'
+[5.759s] running build
+[5.759s] running build_py
+[5.760s] running install
+[5.761s] running install_lib
+[5.764s] running install_data
+[5.765s] running install_egg_info
+[5.784s] removing '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/lib/python3.10/site-packages/magbot_gazebo-0.0.0-py3.10.egg-info' (and everything under it)
+[5.788s] Copying ../../build/magbot_gazebo/magbot_gazebo.egg-info to /home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/lib/python3.10/site-packages/magbot_gazebo-0.0.0-py3.10.egg-info
+[5.795s] running install_scripts
+[5.865s] writing list of installed files to '/home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/install.log'
+[5.967s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_gazebo' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_gazebo build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/install.log --single-version-externally-managed install_data

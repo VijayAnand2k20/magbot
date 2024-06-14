@@ -1,0 +1,20 @@
+[4.718s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_servo_interfacing': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_servo_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/install.log --single-version-externally-managed install_data
+[5.539s] running egg_info
+[5.545s] writing ../../../build/magbot_servo_interfacing/magbot_servo_interfacing.egg-info/PKG-INFO
+[5.548s] writing dependency_links to ../../../build/magbot_servo_interfacing/magbot_servo_interfacing.egg-info/dependency_links.txt
+[5.551s] writing entry points to ../../../build/magbot_servo_interfacing/magbot_servo_interfacing.egg-info/entry_points.txt
+[5.554s] writing requirements to ../../../build/magbot_servo_interfacing/magbot_servo_interfacing.egg-info/requires.txt
+[5.556s] writing top-level names to ../../../build/magbot_servo_interfacing/magbot_servo_interfacing.egg-info/top_level.txt
+[5.573s] reading manifest file '../../../build/magbot_servo_interfacing/magbot_servo_interfacing.egg-info/SOURCES.txt'
+[5.589s] writing manifest file '../../../build/magbot_servo_interfacing/magbot_servo_interfacing.egg-info/SOURCES.txt'
+[5.589s] running build
+[5.590s] running build_py
+[5.590s] running install
+[5.591s] running install_lib
+[5.601s] running install_data
+[5.602s] running install_egg_info
+[5.616s] removing '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/lib/python3.10/site-packages/magbot_servo_interfacing-0.0.0-py3.10.egg-info' (and everything under it)
+[5.616s] Copying ../../../build/magbot_servo_interfacing/magbot_servo_interfacing.egg-info to /home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/lib/python3.10/site-packages/magbot_servo_interfacing-0.0.0-py3.10.egg-info
+[5.619s] running install_scripts
+[5.679s] writing list of installed files to '/home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/install.log'
+[5.838s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_servo_interfacing' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_servo_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/install.log --single-version-externally-managed install_data

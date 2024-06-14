@@ -1,0 +1,33 @@
+[3.640s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_utilities': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_utilities build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/install.log --single-version-externally-managed install_data
+[4.493s] running egg_info
+[4.495s] creating ../../build/magbot_utilities/magbot_utilities.egg-info
+[4.495s] writing ../../build/magbot_utilities/magbot_utilities.egg-info/PKG-INFO
+[4.498s] writing dependency_links to ../../build/magbot_utilities/magbot_utilities.egg-info/dependency_links.txt
+[4.498s] writing entry points to ../../build/magbot_utilities/magbot_utilities.egg-info/entry_points.txt
+[4.498s] writing requirements to ../../build/magbot_utilities/magbot_utilities.egg-info/requires.txt
+[4.498s] writing top-level names to ../../build/magbot_utilities/magbot_utilities.egg-info/top_level.txt
+[4.498s] writing manifest file '../../build/magbot_utilities/magbot_utilities.egg-info/SOURCES.txt'
+[4.509s] reading manifest file '../../build/magbot_utilities/magbot_utilities.egg-info/SOURCES.txt'
+[4.511s] writing manifest file '../../build/magbot_utilities/magbot_utilities.egg-info/SOURCES.txt'
+[4.512s] running build
+[4.512s] running build_py
+[4.512s] creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/build
+[4.512s] creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/build/lib
+[4.512s] creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/build/lib/magbot_utilities
+[4.512s] copying magbot_utilities/__init__.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/build/lib/magbot_utilities
+[4.512s] running install
+[4.513s] running install_lib
+[4.515s] creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/python3.10/site-packages/magbot_utilities
+[4.527s] copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/build/lib/magbot_utilities/__init__.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/python3.10/site-packages/magbot_utilities
+[4.528s] byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/python3.10/site-packages/magbot_utilities/__init__.py to __init__.cpython-310.pyc
+[4.529s] running install_data
+[4.529s] creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/ament_index
+[4.529s] creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/ament_index/resource_index
+[4.530s] creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/ament_index/resource_index/packages
+[4.530s] copying resource/magbot_utilities -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/ament_index/resource_index/packages
+[4.530s] copying package.xml -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities
+[4.532s] running install_egg_info
+[4.534s] Copying ../../build/magbot_utilities/magbot_utilities.egg-info to /home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/python3.10/site-packages/magbot_utilities-0.0.0-py3.10.egg-info
+[4.535s] running install_scripts
+[4.572s] writing list of installed files to '/home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/install.log'
+[4.698s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_utilities' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_utilities build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/install.log --single-version-externally-managed install_data

@@ -1,0 +1,492 @@
+[0.174s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.174s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x703c1e24f370>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x703c1e24ee90>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x703c1e24ee90>>)
+[0.402s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.402s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.402s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.402s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.402s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.402s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.402s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jarvis/magic/ROS/magbot_ws'
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot) by extensions ['ignore', 'ignore_ament_install']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot) by extension 'ignore'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot) by extension 'ignore_ament_install'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot) by extensions ['colcon_pkg']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot) by extension 'colcon_pkg'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot) by extensions ['colcon_meta']
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot) by extension 'colcon_meta'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot) by extensions ['ros']
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot) by extension 'ros'
+[0.423s] DEBUG:colcon.colcon_core.package_identification:Package 'src/magbot' with type 'ros.ament_python' and name 'magbot'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_control) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_control) by extension 'ignore'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_control) by extension 'ignore_ament_install'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_control) by extensions ['colcon_pkg']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_control) by extension 'colcon_pkg'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_control) by extensions ['colcon_meta']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_control) by extension 'colcon_meta'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_control) by extensions ['ros']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_control) by extension 'ros'
+[0.425s] DEBUG:colcon.colcon_core.package_identification:Package 'src/magbot_control' with type 'ros.ament_python' and name 'magbot_control'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_description) by extension 'ignore'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_description) by extension 'ignore_ament_install'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_description) by extensions ['colcon_pkg']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_description) by extension 'colcon_pkg'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_description) by extensions ['colcon_meta']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_description) by extension 'colcon_meta'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_description) by extensions ['ros']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_description) by extension 'ros'
+[0.426s] DEBUG:colcon.colcon_core.package_identification:Package 'src/magbot_description' with type 'ros.ament_python' and name 'magbot_description'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_gazebo) by extension 'ignore'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_gazebo) by extension 'ignore_ament_install'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_gazebo) by extensions ['colcon_pkg']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_gazebo) by extension 'colcon_pkg'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_gazebo) by extensions ['colcon_meta']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_gazebo) by extension 'colcon_meta'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_gazebo) by extensions ['ros']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_gazebo) by extension 'ros'
+[0.428s] DEBUG:colcon.colcon_core.package_identification:Package 'src/magbot_gazebo' with type 'ros.ament_python' and name 'magbot_gazebo'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extensions ['ignore', 'ignore_ament_install']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extension 'ignore'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extension 'ignore_ament_install'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extensions ['colcon_pkg']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extension 'colcon_pkg'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extensions ['colcon_meta']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extension 'colcon_meta'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extensions ['ros']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extension 'ros'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extensions ['cmake', 'python']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extension 'cmake'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extension 'python'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extensions ['python_setup_py']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing) by extension 'python_setup_py'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_input_interfacing) by extensions ['ignore', 'ignore_ament_install']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_input_interfacing) by extension 'ignore'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_input_interfacing) by extension 'ignore_ament_install'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_input_interfacing) by extensions ['colcon_pkg']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_input_interfacing) by extension 'colcon_pkg'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_input_interfacing) by extensions ['colcon_meta']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_input_interfacing) by extension 'colcon_meta'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_input_interfacing) by extensions ['ros']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_input_interfacing) by extension 'ros'
+[0.430s] DEBUG:colcon.colcon_core.package_identification:Package 'src/magbot_hardware_interfacing/magbot_input_interfacing' with type 'ros.ament_python' and name 'magbot_input_interfacing'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_peripheral_interfacing) by extensions ['ignore', 'ignore_ament_install']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_peripheral_interfacing) by extension 'ignore'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_peripheral_interfacing) by extension 'ignore_ament_install'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_peripheral_interfacing) by extensions ['colcon_pkg']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_peripheral_interfacing) by extension 'colcon_pkg'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_peripheral_interfacing) by extensions ['colcon_meta']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_peripheral_interfacing) by extension 'colcon_meta'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_peripheral_interfacing) by extensions ['ros']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_peripheral_interfacing) by extension 'ros'
+[0.433s] DEBUG:colcon.colcon_core.package_identification:Package 'src/magbot_hardware_interfacing/magbot_peripheral_interfacing' with type 'ros.ament_python' and name 'magbot_peripheral_interfacing'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_servo_interfacing) by extensions ['ignore', 'ignore_ament_install']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_servo_interfacing) by extension 'ignore'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_servo_interfacing) by extension 'ignore_ament_install'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_servo_interfacing) by extensions ['colcon_pkg']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_servo_interfacing) by extension 'colcon_pkg'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_servo_interfacing) by extensions ['colcon_meta']
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_servo_interfacing) by extension 'colcon_meta'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_servo_interfacing) by extensions ['ros']
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_hardware_interfacing/magbot_servo_interfacing) by extension 'ros'
+[0.434s] DEBUG:colcon.colcon_core.package_identification:Package 'src/magbot_hardware_interfacing/magbot_servo_interfacing' with type 'ros.ament_python' and name 'magbot_servo_interfacing'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_utilities) by extensions ['ignore', 'ignore_ament_install']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_utilities) by extension 'ignore'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_utilities) by extension 'ignore_ament_install'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_utilities) by extensions ['colcon_pkg']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_utilities) by extension 'colcon_pkg'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_utilities) by extensions ['colcon_meta']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_utilities) by extension 'colcon_meta'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_utilities) by extensions ['ros']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/magbot_utilities) by extension 'ros'
+[0.435s] DEBUG:colcon.colcon_core.package_identification:Package 'src/magbot_utilities' with type 'ros.ament_python' and name 'magbot_utilities'
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.473s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.473s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.476s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 8 installed packages in /home/jarvis/magic/ROS/magbot_ws/install
+[0.477s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/jarvis/magic/ROS/ros2_ws/install
+[0.479s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[0.480s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.541s] Level 5:colcon.colcon_core.verb:set package 'magbot' build argument 'cmake_args' from command line to 'None'
+[0.541s] Level 5:colcon.colcon_core.verb:set package 'magbot' build argument 'cmake_target' from command line to 'None'
+[0.541s] Level 5:colcon.colcon_core.verb:set package 'magbot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.541s] Level 5:colcon.colcon_core.verb:set package 'magbot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.541s] Level 5:colcon.colcon_core.verb:set package 'magbot' build argument 'cmake_clean_first' from command line to 'False'
+[0.541s] Level 5:colcon.colcon_core.verb:set package 'magbot' build argument 'cmake_force_configure' from command line to 'False'
+[0.541s] Level 5:colcon.colcon_core.verb:set package 'magbot' build argument 'ament_cmake_args' from command line to 'None'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.542s] DEBUG:colcon.colcon_core.verb:Building package 'magbot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jarvis/magic/ROS/magbot_ws/build/magbot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jarvis/magic/ROS/magbot_ws/install/magbot', 'merge_install': False, 'path': '/home/jarvis/magic/ROS/magbot_ws/src/magbot', 'symlink_install': False, 'test_result_base': None}
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot_control' build argument 'cmake_args' from command line to 'None'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot_control' build argument 'cmake_target' from command line to 'None'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'magbot_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.542s] DEBUG:colcon.colcon_core.verb:Building package 'magbot_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jarvis/magic/ROS/magbot_ws/build/magbot_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control', 'merge_install': False, 'path': '/home/jarvis/magic/ROS/magbot_ws/src/magbot_control', 'symlink_install': False, 'test_result_base': None}
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_description' build argument 'cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_description' build argument 'cmake_target' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.543s] DEBUG:colcon.colcon_core.verb:Building package 'magbot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jarvis/magic/ROS/magbot_ws/build/magbot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description', 'merge_install': False, 'path': '/home/jarvis/magic/ROS/magbot_ws/src/magbot_description', 'symlink_install': False, 'test_result_base': None}
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'magbot_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.544s] DEBUG:colcon.colcon_core.verb:Building package 'magbot_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo', 'merge_install': False, 'path': '/home/jarvis/magic/ROS/magbot_ws/src/magbot_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_input_interfacing' build argument 'cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_input_interfacing' build argument 'cmake_target' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_input_interfacing' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_input_interfacing' build argument 'cmake_clean_cache' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_input_interfacing' build argument 'cmake_clean_first' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_input_interfacing' build argument 'cmake_force_configure' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_input_interfacing' build argument 'ament_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_input_interfacing' build argument 'catkin_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'magbot_input_interfacing' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.544s] DEBUG:colcon.colcon_core.verb:Building package 'magbot_input_interfacing' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing', 'merge_install': False, 'path': '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_input_interfacing', 'symlink_install': False, 'test_result_base': None}
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_peripheral_interfacing' build argument 'cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_peripheral_interfacing' build argument 'cmake_target' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_peripheral_interfacing' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_peripheral_interfacing' build argument 'cmake_clean_cache' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_peripheral_interfacing' build argument 'cmake_clean_first' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_peripheral_interfacing' build argument 'cmake_force_configure' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_peripheral_interfacing' build argument 'ament_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_peripheral_interfacing' build argument 'catkin_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_peripheral_interfacing' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.545s] DEBUG:colcon.colcon_core.verb:Building package 'magbot_peripheral_interfacing' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing', 'merge_install': False, 'path': '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_peripheral_interfacing', 'symlink_install': False, 'test_result_base': None}
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_servo_interfacing' build argument 'cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_servo_interfacing' build argument 'cmake_target' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_servo_interfacing' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_servo_interfacing' build argument 'cmake_clean_cache' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'magbot_servo_interfacing' build argument 'cmake_clean_first' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_servo_interfacing' build argument 'cmake_force_configure' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_servo_interfacing' build argument 'ament_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_servo_interfacing' build argument 'catkin_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_servo_interfacing' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.546s] DEBUG:colcon.colcon_core.verb:Building package 'magbot_servo_interfacing' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing', 'merge_install': False, 'path': '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_servo_interfacing', 'symlink_install': False, 'test_result_base': None}
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_utilities' build argument 'cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_utilities' build argument 'cmake_target' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_utilities' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_utilities' build argument 'cmake_clean_cache' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_utilities' build argument 'cmake_clean_first' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_utilities' build argument 'cmake_force_configure' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_utilities' build argument 'ament_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_utilities' build argument 'catkin_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'magbot_utilities' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.546s] DEBUG:colcon.colcon_core.verb:Building package 'magbot_utilities' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities', 'merge_install': False, 'path': '/home/jarvis/magic/ROS/magbot_ws/src/magbot_utilities', 'symlink_install': False, 'test_result_base': None}
+[0.547s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.548s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.548s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot' with build type 'ament_python'
+[0.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot', 'ament_prefix_path')
+[0.553s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/hook/ament_prefix_path.ps1'
+[0.554s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/hook/ament_prefix_path.dsv'
+[0.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/hook/ament_prefix_path.sh'
+[0.557s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.557s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.567s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_control' with build type 'ament_python'
+[0.567s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_control', 'ament_prefix_path')
+[0.568s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/hook/ament_prefix_path.ps1'
+[0.570s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/hook/ament_prefix_path.dsv'
+[0.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/hook/ament_prefix_path.sh'
+[0.572s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.572s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.582s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_description' with build type 'ament_python'
+[0.582s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_description', 'ament_prefix_path')
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/hook/ament_prefix_path.ps1'
+[0.584s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/hook/ament_prefix_path.dsv'
+[0.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/hook/ament_prefix_path.sh'
+[0.586s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.586s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.595s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_gazebo' with build type 'ament_python'
+[0.596s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_gazebo', 'ament_prefix_path')
+[0.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/hook/ament_prefix_path.ps1'
+[0.597s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/hook/ament_prefix_path.dsv'
+[0.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/hook/ament_prefix_path.sh'
+[0.599s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.600s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.606s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_input_interfacing' with build type 'ament_python'
+[0.607s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_input_interfacing', 'ament_prefix_path')
+[0.609s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/hook/ament_prefix_path.ps1'
+[0.610s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/hook/ament_prefix_path.dsv'
+[0.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/hook/ament_prefix_path.sh'
+[0.612s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.612s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.619s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_peripheral_interfacing' with build type 'ament_python'
+[0.619s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_peripheral_interfacing', 'ament_prefix_path')
+[0.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/hook/ament_prefix_path.ps1'
+[0.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/hook/ament_prefix_path.dsv'
+[0.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/hook/ament_prefix_path.sh'
+[0.623s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.623s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.631s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_servo_interfacing' with build type 'ament_python'
+[0.631s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_servo_interfacing', 'ament_prefix_path')
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/hook/ament_prefix_path.ps1'
+[0.633s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/hook/ament_prefix_path.dsv'
+[0.635s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/hook/ament_prefix_path.sh'
+[0.636s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.636s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.645s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_utilities' with build type 'ament_python'
+[0.646s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_utilities', 'ament_prefix_path')
+[0.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/hook/ament_prefix_path.ps1'
+[0.647s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/hook/ament_prefix_path.dsv'
+[0.649s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/hook/ament_prefix_path.sh'
+[0.650s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.650s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.111s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot'
+[1.112s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.112s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.489s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_control'
+[1.490s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.490s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.843s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_description'
+[1.843s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.843s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.199s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_gazebo'
+[2.199s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.199s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.545s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_input_interfacing'
+[2.545s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.545s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.904s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_peripheral_interfacing'
+[2.904s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.904s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.240s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_servo_interfacing'
+[3.240s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.240s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.590s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_utilities'
+[3.590s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.590s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.325s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot/install.log --single-version-externally-managed install_data
+[5.339s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_gazebo': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_gazebo build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/install.log --single-version-externally-managed install_data
+[5.351s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_servo_interfacing': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_servo_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/install.log --single-version-externally-managed install_data
+[5.362s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_utilities': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_utilities build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/install.log --single-version-externally-managed install_data
+[5.371s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_input_interfacing': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_input_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/install.log --single-version-externally-managed install_data
+[5.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_control': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_control/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_control build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/install.log --single-version-externally-managed install_data
+[5.382s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_description': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_description/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_description build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_description/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_description/install.log --single-version-externally-managed install_data
+[5.390s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_peripheral_interfacing': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_peripheral_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/install.log --single-version-externally-managed install_data
+[6.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_control' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_control/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_control build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/install.log --single-version-externally-managed install_data
+[6.453s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control' for CMake module files
+[6.455s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control' for CMake config files
+[6.456s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib'
+[6.457s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/bin'
+[6.457s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/pkgconfig/magbot_control.pc'
+[6.458s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/python3.10/site-packages'
+[6.458s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_control', 'pythonpath')
+[6.458s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/hook/pythonpath.ps1'
+[6.459s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/hook/pythonpath.dsv'
+[6.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/hook/pythonpath.sh'
+[6.460s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/bin'
+[6.460s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(magbot_control)
+[6.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/package.ps1'
+[6.462s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/package.dsv'
+[6.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/package.sh'
+[6.464s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/package.bash'
+[6.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control/package.zsh'
+[6.467s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/colcon-core/packages/magbot_control)
+[6.468s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing' for CMake module files
+[6.470s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_servo_interfacing' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_servo_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_servo_interfacing/install.log --single-version-externally-managed install_data
+[6.470s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing' for CMake config files
+[6.472s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/lib'
+[6.472s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/bin'
+[6.472s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/lib/pkgconfig/magbot_servo_interfacing.pc'
+[6.472s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/lib/python3.10/site-packages'
+[6.473s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_servo_interfacing', 'pythonpath')
+[6.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/hook/pythonpath.ps1'
+[6.474s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/hook/pythonpath.dsv'
+[6.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/hook/pythonpath.sh'
+[6.476s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/bin'
+[6.476s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(magbot_servo_interfacing)
+[6.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/package.ps1'
+[6.478s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/package.dsv'
+[6.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/package.sh'
+[6.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/package.bash'
+[6.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/magbot_servo_interfacing/package.zsh'
+[6.482s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing/share/colcon-core/packages/magbot_servo_interfacing)
+[6.486s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot' for CMake module files
+[6.488s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot/install.log --single-version-externally-managed install_data
+[6.489s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot' for CMake config files
+[6.492s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot/lib'
+[6.492s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot/bin'
+[6.493s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot/lib/pkgconfig/magbot.pc'
+[6.494s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot/lib/python3.10/site-packages'
+[6.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot', 'pythonpath')
+[6.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/hook/pythonpath.ps1'
+[6.496s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/hook/pythonpath.dsv'
+[6.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/hook/pythonpath.sh'
+[6.498s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot/bin'
+[6.498s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(magbot)
+[6.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/package.ps1'
+[6.500s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/package.dsv'
+[6.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/package.sh'
+[6.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/package.bash'
+[6.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/magbot/package.zsh'
+[6.504s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jarvis/magic/ROS/magbot_ws/install/magbot/share/colcon-core/packages/magbot)
+[6.505s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description' for CMake module files
+[6.507s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description' for CMake config files
+[6.508s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_description' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_description/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_description build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_description/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_description/install.log --single-version-externally-managed install_data
+[6.511s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/lib'
+[6.511s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/bin'
+[6.511s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/lib/pkgconfig/magbot_description.pc'
+[6.512s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/lib/python3.10/site-packages'
+[6.512s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_description', 'pythonpath')
+[6.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/hook/pythonpath.ps1'
+[6.514s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/hook/pythonpath.dsv'
+[6.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/hook/pythonpath.sh'
+[6.516s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/bin'
+[6.516s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(magbot_description)
+[6.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/package.ps1'
+[6.517s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/package.dsv'
+[6.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/package.sh'
+[6.519s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/package.bash'
+[6.519s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/magbot_description/package.zsh'
+[6.520s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/share/colcon-core/packages/magbot_description)
+[6.521s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities' for CMake module files
+[6.525s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_utilities' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_utilities build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_utilities/install.log --single-version-externally-managed install_data
+[6.525s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities' for CMake config files
+[6.528s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib'
+[6.528s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/bin'
+[6.529s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/pkgconfig/magbot_utilities.pc'
+[6.530s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/lib/python3.10/site-packages'
+[6.530s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_utilities', 'pythonpath')
+[6.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/hook/pythonpath.ps1'
+[6.532s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/hook/pythonpath.dsv'
+[6.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/hook/pythonpath.sh'
+[6.534s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/bin'
+[6.534s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(magbot_utilities)
+[6.535s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/package.ps1'
+[6.535s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/package.dsv'
+[6.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/package.sh'
+[6.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/package.bash'
+[6.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/magbot_utilities/package.zsh'
+[6.538s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities/share/colcon-core/packages/magbot_utilities)
+[6.539s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing' for CMake module files
+[6.540s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing' for CMake config files
+[6.541s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_input_interfacing' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_input_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_input_interfacing/install.log --single-version-externally-managed install_data
+[6.542s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/lib'
+[6.542s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/bin'
+[6.542s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/lib/pkgconfig/magbot_input_interfacing.pc'
+[6.543s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/lib/python3.10/site-packages'
+[6.543s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_input_interfacing', 'pythonpath')
+[6.543s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/hook/pythonpath.ps1'
+[6.544s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/hook/pythonpath.dsv'
+[6.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/hook/pythonpath.sh'
+[6.547s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/bin'
+[6.547s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(magbot_input_interfacing)
+[6.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/package.ps1'
+[6.550s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/package.dsv'
+[6.551s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/package.sh'
+[6.552s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/package.bash'
+[6.553s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/magbot_input_interfacing/package.zsh'
+[6.554s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing/share/colcon-core/packages/magbot_input_interfacing)
+[6.559s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo' for CMake module files
+[6.560s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo' for CMake config files
+[6.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_gazebo' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_gazebo build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_gazebo/install.log --single-version-externally-managed install_data
+[6.563s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/lib'
+[6.563s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/bin'
+[6.563s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/lib/pkgconfig/magbot_gazebo.pc'
+[6.564s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/lib/python3.10/site-packages'
+[6.564s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_gazebo', 'pythonpath')
+[6.565s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/hook/pythonpath.ps1'
+[6.566s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/hook/pythonpath.dsv'
+[6.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/hook/pythonpath.sh'
+[6.568s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/bin'
+[6.569s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(magbot_gazebo)
+[6.570s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/package.ps1'
+[6.571s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/package.dsv'
+[6.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/package.sh'
+[6.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/package.bash'
+[6.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/package.zsh'
+[6.575s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/colcon-core/packages/magbot_gazebo)
+[6.577s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing' for CMake module files
+[6.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_peripheral_interfacing' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_peripheral_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/install.log --single-version-externally-managed install_data
+[6.579s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing' for CMake config files
+[6.581s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib'
+[6.582s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/bin'
+[6.582s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/pkgconfig/magbot_peripheral_interfacing.pc'
+[6.583s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages'
+[6.584s] Level 1:colcon.colcon_core.shell:create_environment_hook('magbot_peripheral_interfacing', 'pythonpath')
+[6.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/hook/pythonpath.ps1'
+[6.586s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/hook/pythonpath.dsv'
+[6.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/hook/pythonpath.sh'
+[6.590s] Level 1:colcon.colcon_core.environment:checking '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/bin'
+[6.590s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(magbot_peripheral_interfacing)
+[6.592s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/package.ps1'
+[6.593s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/package.dsv'
+[6.594s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/package.sh'
+[6.595s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/package.bash'
+[6.596s] INFO:colcon.colcon_core.shell:Creating package script '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/package.zsh'
+[6.596s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/colcon-core/packages/magbot_peripheral_interfacing)
+[6.598s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.598s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.602s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.609s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.632s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.632s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.632s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.666s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.667s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jarvis/magic/ROS/magbot_ws/install/local_setup.ps1'
+[6.669s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jarvis/magic/ROS/magbot_ws/install/_local_setup_util_ps1.py'
+[6.671s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jarvis/magic/ROS/magbot_ws/install/setup.ps1'
+[6.675s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jarvis/magic/ROS/magbot_ws/install/local_setup.sh'
+[6.678s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jarvis/magic/ROS/magbot_ws/install/_local_setup_util_sh.py'
+[6.682s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jarvis/magic/ROS/magbot_ws/install/setup.sh'
+[6.689s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jarvis/magic/ROS/magbot_ws/install/local_setup.bash'
+[6.692s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jarvis/magic/ROS/magbot_ws/install/setup.bash'
+[6.695s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jarvis/magic/ROS/magbot_ws/install/local_setup.zsh'
+[6.696s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jarvis/magic/ROS/magbot_ws/install/setup.zsh'

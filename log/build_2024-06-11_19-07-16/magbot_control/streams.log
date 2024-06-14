@@ -1,0 +1,33 @@
+[3.828s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_control': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_control/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_control build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/install.log --single-version-externally-managed install_data
+[4.687s] running egg_info
+[4.687s] creating ../../build/magbot_control/magbot_control.egg-info
+[4.687s] writing ../../build/magbot_control/magbot_control.egg-info/PKG-INFO
+[4.688s] writing dependency_links to ../../build/magbot_control/magbot_control.egg-info/dependency_links.txt
+[4.688s] writing entry points to ../../build/magbot_control/magbot_control.egg-info/entry_points.txt
+[4.689s] writing requirements to ../../build/magbot_control/magbot_control.egg-info/requires.txt
+[4.689s] writing top-level names to ../../build/magbot_control/magbot_control.egg-info/top_level.txt
+[4.693s] writing manifest file '../../build/magbot_control/magbot_control.egg-info/SOURCES.txt'
+[4.702s] reading manifest file '../../build/magbot_control/magbot_control.egg-info/SOURCES.txt'
+[4.704s] writing manifest file '../../build/magbot_control/magbot_control.egg-info/SOURCES.txt'
+[4.704s] running build
+[4.704s] running build_py
+[4.715s] creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/build
+[4.716s] creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/build/lib
+[4.717s] creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/build/lib/magbot_control
+[4.718s] copying magbot_control/__init__.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/build/lib/magbot_control
+[4.719s] running install
+[4.721s] running install_lib
+[4.723s] creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/python3.10/site-packages/magbot_control
+[4.724s] copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/build/lib/magbot_control/__init__.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/python3.10/site-packages/magbot_control
+[4.725s] byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/python3.10/site-packages/magbot_control/__init__.py to __init__.cpython-310.pyc
+[4.726s] running install_data
+[4.727s] creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/ament_index
+[4.727s] creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/ament_index/resource_index
+[4.727s] creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/ament_index/resource_index/packages
+[4.728s] copying resource/magbot_control -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/ament_index/resource_index/packages
+[4.728s] copying package.xml -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_control/share/magbot_control
+[4.729s] running install_egg_info
+[4.749s] Copying ../../build/magbot_control/magbot_control.egg-info to /home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/python3.10/site-packages/magbot_control-0.0.0-py3.10.egg-info
+[4.750s] running install_scripts
+[4.813s] writing list of installed files to '/home/jarvis/magic/ROS/magbot_ws/build/magbot_control/install.log'
+[4.900s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_control' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_control/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_control build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_control/install.log --single-version-externally-managed install_data

@@ -1,0 +1,30 @@
+[4.770s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_peripheral_interfacing': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_peripheral_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/install.log --single-version-externally-managed install_data
+[5.819s] running egg_info
+[5.820s] writing ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/PKG-INFO
+[5.820s] writing dependency_links to ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/dependency_links.txt
+[5.820s] writing entry points to ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/entry_points.txt
+[5.820s] writing requirements to ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/requires.txt
+[5.820s] writing top-level names to ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/top_level.txt
+[5.820s] reading manifest file '../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/SOURCES.txt'
+[5.821s] writing manifest file '../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/SOURCES.txt'
+[5.821s] running build
+[5.821s] running build_py
+[5.821s] copying magbot_peripheral_interfacing/IMU.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing
+[5.822s] copying magbot_peripheral_interfacing/magbot_lcd_interfacing.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing
+[5.822s] copying magbot_peripheral_interfacing/battery_voltage_checking.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing
+[5.822s] running install
+[5.822s] running install_lib
+[5.822s] copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/IMU.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing
+[5.822s] copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/magbot_lcd_interfacing.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing
+[5.823s] copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/battery_voltage_checking.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing
+[5.823s] byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/IMU.py to IMU.cpython-310.pyc
+[5.823s] byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/magbot_lcd_interfacing.py to magbot_lcd_interfacing.cpython-310.pyc
+[5.823s] byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/battery_voltage_checking.py to battery_voltage_checking.cpython-310.pyc
+[5.823s] running install_data
+[5.824s] copying package.xml -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing
+[5.824s] running install_egg_info
+[5.824s] removing '/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing-0.0.0-py3.10.egg-info' (and everything under it)
+[5.824s] Copying ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info to /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing-0.0.0-py3.10.egg-info
+[5.824s] running install_scripts
+[5.824s] writing list of installed files to '/home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/install.log'
+[5.958s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_hardware_interfacing/magbot_peripheral_interfacing' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/magbot_peripheral_interfacing build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/install.log --single-version-externally-managed install_data

@@ -1,0 +1,20 @@
+[4.799s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_description': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_description/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_description build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_description/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_description/install.log --single-version-externally-managed install_data
+[5.833s] running egg_info
+[5.833s] writing ../../build/magbot_description/magbot_description.egg-info/PKG-INFO
+[5.833s] writing dependency_links to ../../build/magbot_description/magbot_description.egg-info/dependency_links.txt
+[5.834s] writing entry points to ../../build/magbot_description/magbot_description.egg-info/entry_points.txt
+[5.834s] writing requirements to ../../build/magbot_description/magbot_description.egg-info/requires.txt
+[5.834s] writing top-level names to ../../build/magbot_description/magbot_description.egg-info/top_level.txt
+[5.834s] reading manifest file '../../build/magbot_description/magbot_description.egg-info/SOURCES.txt'
+[5.834s] writing manifest file '../../build/magbot_description/magbot_description.egg-info/SOURCES.txt'
+[5.835s] running build
+[5.835s] running build_py
+[5.835s] running install
+[5.835s] running install_lib
+[5.835s] running install_data
+[5.836s] running install_egg_info
+[5.836s] removing '/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/lib/python3.10/site-packages/magbot_description-0.0.0-py3.10.egg-info' (and everything under it)
+[5.836s] Copying ../../build/magbot_description/magbot_description.egg-info to /home/jarvis/magic/ROS/magbot_ws/install/magbot_description/lib/python3.10/site-packages/magbot_description-0.0.0-py3.10.egg-info
+[5.836s] running install_scripts
+[5.836s] writing list of installed files to '/home/jarvis/magic/ROS/magbot_ws/build/magbot_description/install.log'
+[5.925s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/src/magbot_description' returned '0': PYTHONPATH=/home/jarvis/magic/ROS/magbot_ws/build/magbot_description/prefix_override:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/magbot_description build --build-base /home/jarvis/magic/ROS/magbot_ws/build/magbot_description/build install --record /home/jarvis/magic/ROS/magbot_ws/build/magbot_description/install.log --single-version-externally-managed install_data
