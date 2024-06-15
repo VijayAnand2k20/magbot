@@ -1,0 +1,222 @@
+[0.090s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg': CMAKE_PREFIX_PATH=/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control:/home/jarvis/magic/ROS/magbot_ws/install/magbot:/home/jarvis/magic/ROS/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/jarvis/magic/ROS/magbot_ws/src/interfaces_pkg -DCMAKE_INSTALL_PREFIX=/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg
+[2.985s] -- The C compiler identification is GNU 11.4.0
+[2.985s] -- The CXX compiler identification is GNU 11.4.0
+[2.986s] -- Detecting C compiler ABI info
+[2.986s] -- Detecting C compiler ABI info - done
+[2.986s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.987s] -- Detecting C compile features
+[2.987s] -- Detecting C compile features - done
+[2.988s] -- Detecting CXX compiler ABI info
+[2.989s] -- Detecting CXX compiler ABI info - done
+[2.989s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.990s] -- Detecting CXX compile features
+[2.992s] -- Detecting CXX compile features - done
+[2.992s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.992s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.993s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.993s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.993s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.993s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.993s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.993s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.993s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.993s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.993s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.993s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.993s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.993s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.994s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.994s] -- Found PythonExtra: .so  
+[2.994s] -- Configuring done
+[2.994s] -- Generating done
+[2.995s] -- Build files have been written to: /home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg
+[2.996s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg' returned '0': CMAKE_PREFIX_PATH=/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control:/home/jarvis/magic/ROS/magbot_ws/install/magbot:/home/jarvis/magic/ROS/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/jarvis/magic/ROS/magbot_ws/src/interfaces_pkg -DCMAKE_INSTALL_PREFIX=/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg
+[2.996s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg': CMAKE_PREFIX_PATH=/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control:/home/jarvis/magic/ROS/magbot_ws/install/magbot:/home/jarvis/magic/ROS/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg -- -j8 -l8
+[3.135s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.175s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.277s] [  6%] Built target ament_cmake_python_copy_interfaces_pkg
+[4.426s] [  6%] Built target interfaces_pkg__cpp
+[4.496s] [  9%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.551s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[4.569s] [ 16%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.721s] [ 19%] [32mBuilding C object CMakeFiles/interfaces_pkg__rosidl_generator_c.dir/rosidl_generator_c/interfaces_pkg/msg/detail/electrical_measurements__functions.c.o[0m
+[4.800s] running egg_info
+[4.826s] creating interfaces_pkg.egg-info
+[4.827s] writing interfaces_pkg.egg-info/PKG-INFO
+[4.828s] writing dependency_links to interfaces_pkg.egg-info/dependency_links.txt
+[4.837s] writing top-level names to interfaces_pkg.egg-info/top_level.txt
+[4.837s] writing manifest file 'interfaces_pkg.egg-info/SOURCES.txt'
+[4.858s] reading manifest file 'interfaces_pkg.egg-info/SOURCES.txt'
+[4.867s] writing manifest file 'interfaces_pkg.egg-info/SOURCES.txt'
+[5.013s] [ 22%] [32m[1mLinking C shared library libinterfaces_pkg__rosidl_generator_c.so[0m
+[5.215s] [ 22%] Built target ament_cmake_python_build_interfaces_pkg_egg
+[5.275s] [ 22%] Built target interfaces_pkg__rosidl_generator_c
+[5.374s] [ 29%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[5.381s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[5.395s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.462s] [ 35%] [32mBuilding CXX object CMakeFiles/interfaces_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces_pkg/msg/detail/electrical_measurements__type_support.cpp.o[0m
+[6.059s] [ 38%] [32mBuilding CXX object CMakeFiles/interfaces_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces_pkg/msg/electrical_measurements__type_support.cpp.o[0m
+[6.352s] [ 41%] [32mBuilding CXX object CMakeFiles/interfaces_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces_pkg/msg/detail/dds_fastrtps/electrical_measurements__type_support.cpp.o[0m
+[6.739s] [ 45%] [32mBuilding CXX object CMakeFiles/interfaces_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces_pkg/msg/electrical_measurements__type_support.cpp.o[0m
+[6.933s] [ 48%] [32m[1mLinking CXX shared library libinterfaces_pkg__rosidl_typesupport_c.so[0m
+[6.974s] [ 51%] [32mBuilding C object CMakeFiles/interfaces_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces_pkg/msg/detail/electrical_measurements__type_support.c.o[0m
+[7.154s] [ 54%] [32mBuilding CXX object CMakeFiles/interfaces_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces_pkg/msg/detail/electrical_measurements__type_support_c.cpp.o[0m
+[7.196s] [ 54%] Built target interfaces_pkg__rosidl_typesupport_c
+[7.238s] [ 58%] [32m[1mLinking C shared library libinterfaces_pkg__rosidl_typesupport_introspection_c.so[0m
+[7.450s] [ 58%] Built target interfaces_pkg__rosidl_typesupport_introspection_c
+[7.499s] [ 61%] [32m[1mLinking CXX shared library libinterfaces_pkg__rosidl_typesupport_cpp.so[0m
+[7.615s] [ 64%] [32m[1mLinking CXX shared library libinterfaces_pkg__rosidl_typesupport_introspection_cpp.so[0m
+[7.720s] [ 64%] Built target interfaces_pkg__rosidl_typesupport_cpp
+[7.744s] [ 64%] Built target interfaces_pkg__rosidl_typesupport_introspection_cpp
+[8.206s] [ 67%] [32m[1mLinking CXX shared library libinterfaces_pkg__rosidl_typesupport_fastrtps_c.so[0m
+[8.246s] [ 70%] [32m[1mLinking CXX shared library libinterfaces_pkg__rosidl_typesupport_fastrtps_cpp.so[0m
+[8.472s] [ 70%] Built target interfaces_pkg__rosidl_typesupport_fastrtps_c
+[8.518s] [ 70%] Built target interfaces_pkg__rosidl_typesupport_fastrtps_cpp
+[8.564s] [ 70%] Built target interfaces_pkg
+[8.638s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[9.417s] [ 74%] Built target interfaces_pkg__py
+[9.462s] [ 77%] [32mBuilding C object CMakeFiles/interfaces_pkg__rosidl_generator_py.dir/rosidl_generator_py/interfaces_pkg/msg/_electrical_measurements_s.c.o[0m
+[9.708s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/interfaces_pkg/libinterfaces_pkg__rosidl_generator_py.so[0m
+[9.790s] [ 80%] Built target interfaces_pkg__rosidl_generator_py
+[9.835s] [ 83%] [32mBuilding C object CMakeFiles/interfaces_pkg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/interfaces_pkg/_interfaces_pkg_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[9.870s] [ 90%] [32mBuilding C object CMakeFiles/interfaces_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/interfaces_pkg/_interfaces_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[9.870s] [ 90%] [32mBuilding C object CMakeFiles/interfaces_pkg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/interfaces_pkg/_interfaces_pkg_s.ep.rosidl_typesupport_c.c.o[0m
+[10.093s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[10.095s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[10.096s] [100%] [32m[1mLinking C shared library rosidl_generator_py/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[10.170s] [100%] Built target interfaces_pkg__rosidl_typesupport_fastrtps_c__pyext
+[10.172s] [100%] Built target interfaces_pkg__rosidl_typesupport_introspection_c__pyext
+[10.173s] [100%] Built target interfaces_pkg__rosidl_typesupport_c__pyext
+[10.199s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg' returned '0': CMAKE_PREFIX_PATH=/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control:/home/jarvis/magic/ROS/magbot_ws/install/magbot:/home/jarvis/magic/ROS/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg -- -j8 -l8
+[10.307s] Invoking command in '/home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg': CMAKE_PREFIX_PATH=/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control:/home/jarvis/magic/ROS/magbot_ws/install/magbot:/home/jarvis/magic/ROS/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg
+[10.322s] -- Install configuration: ""
+[10.323s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/ament_index/resource_index/rosidl_interfaces/interfaces_pkg
+[10.323s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg
+[10.324s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg
+[10.325s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail
+[10.325s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__struct.h
+[10.325s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__type_support.h
+[10.325s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__functions.c
+[10.325s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__functions.h
+[10.326s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/electrical_measurements.h
+[10.326s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/rosidl_generator_c__visibility_control.h
+[10.326s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/environment/library_path.sh
+[10.326s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/environment/library_path.dsv
+[10.327s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_generator_c.so
+[10.328s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_generator_c.so" to ""
+[10.328s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg
+[10.329s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg
+[10.329s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail
+[10.329s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__rosidl_typesupport_fastrtps_c.h
+[10.329s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[10.330s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_fastrtps_c.so
+[10.331s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_fastrtps_c.so" to ""
+[10.331s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg
+[10.331s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg
+[10.332s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail
+[10.332s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__type_support.c
+[10.332s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__rosidl_typesupport_introspection_c.h
+[10.332s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[10.332s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_introspection_c.so
+[10.333s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_introspection_c.so" to ""
+[10.333s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_c.so
+[10.334s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_c.so" to ""
+[10.334s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg
+[10.334s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg
+[10.334s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/electrical_measurements.hpp
+[10.335s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail
+[10.335s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__struct.hpp
+[10.335s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__traits.hpp
+[10.335s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__builder.hpp
+[10.335s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg
+[10.336s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg
+[10.336s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail
+[10.336s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__rosidl_typesupport_fastrtps_cpp.hpp
+[10.336s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/dds_fastrtps
+[10.336s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[10.336s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_fastrtps_cpp.so
+[10.337s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_fastrtps_cpp.so" to ""
+[10.337s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg
+[10.337s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg
+[10.338s] -- Up-to-date: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail
+[10.338s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__rosidl_typesupport_introspection_cpp.hpp
+[10.338s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/include/interfaces_pkg/interfaces_pkg/msg/detail/electrical_measurements__type_support.cpp
+[10.338s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_introspection_cpp.so
+[10.338s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_introspection_cpp.so" to ""
+[10.339s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_cpp.so
+[10.339s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_typesupport_cpp.so" to ""
+[10.339s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/environment/pythonpath.sh
+[10.339s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/environment/pythonpath.dsv
+[10.340s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg-0.0.0-py3.10.egg-info
+[10.340s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg-0.0.0-py3.10.egg-info/dependency_links.txt
+[10.340s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg-0.0.0-py3.10.egg-info/top_level.txt
+[10.340s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg-0.0.0-py3.10.egg-info/SOURCES.txt
+[10.341s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg-0.0.0-py3.10.egg-info/PKG-INFO
+[10.341s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg
+[10.341s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[10.341s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/msg
+[10.341s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/msg/_electrical_measurements_s.c
+[10.342s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/msg/__init__.py
+[10.342s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/msg/_electrical_measurements.py
+[10.342s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/__init__.py
+[10.342s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/_interfaces_pkg_s.ep.rosidl_typesupport_introspection_c.c
+[10.342s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[10.343s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[10.345s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/libinterfaces_pkg__rosidl_generator_py.so
+[10.345s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/_interfaces_pkg_s.ep.rosidl_typesupport_c.c
+[10.346s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/_interfaces_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+[10.415s] Listing '/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg'...
+[10.416s] Compiling '/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/__init__.py'...
+[10.416s] Listing '/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/msg'...
+[10.416s] Compiling '/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/msg/__init__.py'...
+[10.416s] Compiling '/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/msg/_electrical_measurements.py'...
+[10.423s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[10.424s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[10.424s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[10.425s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[10.425s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[10.428s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/local/lib/python3.10/dist-packages/interfaces_pkg/interfaces_pkg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[10.429s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_generator_py.so
+[10.430s] -- Set runtime path of "/home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/lib/libinterfaces_pkg__rosidl_generator_py.so" to ""
+[10.430s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/msg/ElectricalMeasurements.idl
+[10.430s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/msg/ElectricalMeasurements.msg
+[10.431s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/ament_index/resource_index/package_run_dependencies/interfaces_pkg
+[10.431s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/ament_index/resource_index/parent_prefix_path/interfaces_pkg
+[10.431s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/environment/ament_prefix_path.sh
+[10.431s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/environment/ament_prefix_path.dsv
+[10.431s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/environment/path.sh
+[10.431s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/environment/path.dsv
+[10.432s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/local_setup.bash
+[10.432s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/local_setup.sh
+[10.432s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/local_setup.zsh
+[10.432s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/local_setup.dsv
+[10.432s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/package.dsv
+[10.432s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/ament_index/resource_index/packages/interfaces_pkg
+[10.433s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/export_interfaces_pkg__rosidl_generator_cExport.cmake
+[10.433s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/export_interfaces_pkg__rosidl_generator_cExport-noconfig.cmake
+[10.433s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/export_interfaces_pkg__rosidl_typesupport_fastrtps_cExport.cmake
+[10.433s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/export_interfaces_pkg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[10.434s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkg__rosidl_typesupport_introspection_cExport.cmake
+[10.434s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[10.434s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkg__rosidl_typesupport_cExport.cmake
+[10.435s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkg__rosidl_typesupport_cExport-noconfig.cmake
+[10.435s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/export_interfaces_pkg__rosidl_generator_cppExport.cmake
+[10.435s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/export_interfaces_pkg__rosidl_typesupport_fastrtps_cppExport.cmake
+[10.436s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/export_interfaces_pkg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[10.436s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkg__rosidl_typesupport_introspection_cppExport.cmake
+[10.436s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[10.436s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkg__rosidl_typesupport_cppExport.cmake
+[10.437s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkg__rosidl_typesupport_cppExport-noconfig.cmake
+[10.437s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/export_interfaces_pkg__rosidl_generator_pyExport.cmake
+[10.438s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/export_interfaces_pkg__rosidl_generator_pyExport-noconfig.cmake
+[10.438s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/rosidl_cmake-extras.cmake
+[10.440s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.440s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/ament_cmake_export_libraries-extras.cmake
+[10.441s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[10.441s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[10.441s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.441s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[10.441s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkgConfig.cmake
+[10.441s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/cmake/interfaces_pkgConfig-version.cmake
+[10.442s] -- Installing: /home/jarvis/magic/ROS/magbot_ws/install/interfaces_pkg/share/interfaces_pkg/package.xml
+[10.460s] Invoked command in '/home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg' returned '0': CMAKE_PREFIX_PATH=/home/jarvis/magic/ROS/magbot_ws/install/magbot_utilities:/home/jarvis/magic/ROS/magbot_ws/install/magbot_servo_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_input_interfacing:/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo:/home/jarvis/magic/ROS/magbot_ws/install/magbot_description:/home/jarvis/magic/ROS/magbot_ws/install/magbot_control:/home/jarvis/magic/ROS/magbot_ws/install/magbot:/home/jarvis/magic/ROS/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/jarvis/magic/ROS/magbot_ws/build/interfaces_pkg

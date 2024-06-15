@@ -1,0 +1,57 @@
+running egg_info
+creating ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info
+writing ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/PKG-INFO
+writing dependency_links to ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/dependency_links.txt
+writing entry points to ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/entry_points.txt
+writing requirements to ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/requires.txt
+writing top-level names to ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/top_level.txt
+writing manifest file '../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/SOURCES.txt'
+reading manifest file '../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/SOURCES.txt'
+writing manifest file '../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build
+creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib
+creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing
+copying magbot_peripheral_interfacing/__init__.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing
+copying magbot_peripheral_interfacing/IMU.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing
+copying magbot_peripheral_interfacing/magbot_lcd_interfacing.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing
+copying magbot_peripheral_interfacing/battery_voltage_checking.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing
+creating /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/scripts
+copying magbot_peripheral_interfacing/scripts/lcdconfig.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/scripts
+copying magbot_peripheral_interfacing/scripts/__init__.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/scripts
+copying magbot_peripheral_interfacing/scripts/LCD_1inch47.py -> /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/scripts
+running install
+running install_lib
+creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing
+copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/__init__.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing
+creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/scripts
+copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/scripts/lcdconfig.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/scripts
+copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/scripts/__init__.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/scripts
+copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/scripts/LCD_1inch47.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/scripts
+copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/IMU.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing
+copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/magbot_lcd_interfacing.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing
+copying /home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/build/lib/magbot_peripheral_interfacing/battery_voltage_checking.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing
+byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/scripts/lcdconfig.py to lcdconfig.cpython-310.pyc
+byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/scripts/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/scripts/LCD_1inch47.py to LCD_1inch47.cpython-310.pyc
+byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/IMU.py to IMU.cpython-310.pyc
+byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/magbot_lcd_interfacing.py to magbot_lcd_interfacing.cpython-310.pyc
+byte-compiling /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing/battery_voltage_checking.py to battery_voltage_checking.cpython-310.pyc
+running install_data
+creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/ament_index
+creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/ament_index/resource_index
+creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/ament_index/resource_index/packages
+copying resource/magbot_peripheral_interfacing -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/ament_index/resource_index/packages
+copying package.xml -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing
+creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/launch
+copying launch/magbot_lcd_service.launch.py -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/launch
+creating /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/lib
+copying lib/emptybatterystatus_white.png -> /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/share/magbot_peripheral_interfacing/lib
+running install_egg_info
+Copying ../../../build/magbot_peripheral_interfacing/magbot_peripheral_interfacing.egg-info to /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/python3.10/site-packages/magbot_peripheral_interfacing-0.0.0-py3.10.egg-info
+running install_scripts
+Installing imu script to /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/magbot_peripheral_interfacing
+Installing magbot_lcd_interfacing script to /home/jarvis/magic/ROS/magbot_ws/install/magbot_peripheral_interfacing/lib/magbot_peripheral_interfacing
+writing list of installed files to '/home/jarvis/magic/ROS/magbot_ws/build/magbot_peripheral_interfacing/install.log'

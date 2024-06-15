@@ -17,7 +17,7 @@ from ament_index_python.packages import get_package_share_directory
 # import LCD_1inch47
 import spidev as SPI
 
-from magbot_peripheral_interfacing.msg import ElectricalMeasurements
+from interfaces_pkg.msg import ElectricalMeasurements
 from magbot_peripheral_interfacing.scripts import LCD_1inch47
 
 
@@ -40,7 +40,7 @@ class MagbotDisplayNode(Node):
         # Clear display.
         self.disp.clear()
         self.battery_voltage_subscriber = self.create_subscription(
-            ElectricalMeasurements, "/electrical_measurements", self.update_battery_percentage)
+            ElectricalMeasurements, "/electrical_measurements", self.update_battery_percentage, 10)
 
         self.battery_percentage = 0.7
 
@@ -60,16 +60,19 @@ class MagbotDisplayNode(Node):
                 "RGB", (self.disp.height, self.disp.width), "black")
             draw = ImageDraw.Draw(image1)
 
-            Font1 = ImageFont.truetype(
-                "/usr/share/fonts/truetype/Font02.ttf", 25)
-            Font1_small = ImageFont.truetype(
-                "/usr/share/fonts/truetype/Font02.ttf", 20)
-            Font1_large = ImageFont.truetype(
-                "/usr/share/fonts/truetype/Font02.ttf", 60)
-            Font2 = ImageFont.truetype(
-                "/usr/share/fonts/truetype/Font01.ttf", 35)
-            Font3 = ImageFont.truetype(
-                "/usr/share/fonts/truetype/Font02.ttf", 120)
+            # Font1 = ImageFont.truetype(
+            #     "/home/pi/Font02.ttf", 25)
+            # Font1_small = ImageFont.truetype(
+            #     "/home/pi/Font02.ttf", 20)
+            # Font1_large = ImageFont.truetype(
+            #     "/home/pi/Font02.ttf", 60)
+            Font1 = ImageFont.load_default()
+            Font1_small = ImageFont.load_default()
+            Font1_large = ImageFont.load_default()
+            # Font2 = ImageFont.truetype(
+            #     "/usr/share/fonts/truetype/Font01.ttf", 35)
+            # Font3 = ImageFont.truetype(
+            #     "/usr/share/fonts/truetype/Font02.ttf", 120)
 
             draw.text((20, 110), 'SSID: ' + self.ssid,
                       fill="WHITE", font=Font1)
@@ -81,7 +84,7 @@ class MagbotDisplayNode(Node):
             black = Image.new("RGB", (320, 172), "black")
 
             batt_status = Image.open(get_package_share_directory(
-                "dingo_peripheral_interfacing") + "/lib/emptybatterystatus_white.png")
+                "magbot_peripheral_interfacing") + "/lib/emptybatterystatus_white.png")
 
             batt_draw = ImageDraw.Draw(batt_status)
 
@@ -125,7 +128,7 @@ class MagbotDisplayNode(Node):
                 self.ipAddress = '-:-:-:-'
 
             # rospy.loginfo("IP: {self.ipAddress}")
-            self.get_logger().info("IP: {self.ipAddress}")
+            self.get_logger().info(f"IP: {self.ipAddress}")
 
         except rclpy.exceptions.ROSInterruptException as e:
             self.get_logger().error(str(e))

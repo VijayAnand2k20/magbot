@@ -1,6 +1,7 @@
 
 import time
-import lcdconfig
+# import lcdconfig
+from magbot_peripheral_interfacing.scripts import lcdconfig
 
 class LCD_1inch47(lcdconfig.RaspberryPi):
 
