@@ -6,11 +6,23 @@
   <description>TODO: Package description</description>
   <maintainer email="vijayanand2k20@gmail.com">jarvis</maintainer>
   <license>TODO: License declaration</license>
+  
+  <depend>rclpy</depend>
+  <depend>magbot_control</depend>
+  <depend>magbot_input_interfacing</depend>
+  <depend>interfaces_pkg</depend>
+  <depend>magbot_servo_interfacing</depend>
+  <depend>magbot_peripheral_interfacing</depend>
+  <depend>std_msgs</depend>
+
+  <depend>rosserial_python</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
+
+  <exec_depend>ros2launch</exec_depend>
 
   <export>
     <build_type>ament_python</build_type>

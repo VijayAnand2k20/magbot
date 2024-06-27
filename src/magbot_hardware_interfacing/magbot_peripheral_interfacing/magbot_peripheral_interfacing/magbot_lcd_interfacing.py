@@ -14,7 +14,6 @@ from rclpy.node import Node
 from ament_index_python.packages import get_package_share_directory
 
 # PI imports
-# import LCD_1inch47
 import spidev as SPI
 
 from interfaces_pkg.msg import ElectricalMeasurements

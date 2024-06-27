@@ -7,6 +7,12 @@
   <maintainer email="vijayanand2k20@gmail.com">jarvis</maintainer>
   <license>TODO: License declaration</license>
 
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>magbot_utilities</depend>
+  <depend>interfaces_pkg</depend>
+
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>

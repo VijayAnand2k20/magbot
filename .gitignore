@@ -3,5 +3,6 @@
 **/__pycache__
 build/
 install/
+log/
 .vscode/*
-magbot_ws/src/.vscode/*
+src/.vscode/*

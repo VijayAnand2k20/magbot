@@ -11,7 +11,11 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools'],
+    install_requires=[
+        'setuptools',
+        'numpy',
+        'adafruit-circuitpython-servokit'
+    ],
     zip_safe=True,
     maintainer='jarvis',
     maintainer_email='vijayanand2k20@gmail.com',

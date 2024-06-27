@@ -22,7 +22,8 @@ setup(
         'Pillow',
         'spidev',
         'numpy',
-        
+        'adafruit-circuitpython-bno055',
+        'board'
     ],
     zip_safe=True,
     maintainer='jarvis',
@@ -33,7 +34,7 @@ setup(
     entry_points={
         'console_scripts': [
             "magbot_lcd_interfacing = magbot_peripheral_interfacing.magbot_lcd_interfacing:main",
-            "imu = magbot_peripheral_interfacing.IMU:main",
+            # "imu = magbot_peripheral_interfacing.IMU:main",
         ],
     },
 )

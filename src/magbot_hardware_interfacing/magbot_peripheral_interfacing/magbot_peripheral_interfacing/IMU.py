@@ -8,7 +8,7 @@ import board
 import adafruit_bno055
 
 # ROS imports
-import rclpy
+# import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 
@@ -21,12 +21,12 @@ class IMU(Node):
         self.start_time = time.time()
         
         #! Additional setup for debugging only
-        self.pub = self.create_publisher(String, 'imu_data', 10)
-        self.create_timer(0.1, self.timer_callback)
+    #     self.pub = self.create_publisher(String, 'imu_data', 10)
+    #     self.create_timer(0.1, self.timer_callback)
     
-    def timer_callback(self):
-        euler = self.read_orientation()
-        self.get_logger().info("Euler: " + str(euler[0]) + " " + str(euler[1]) + " " + str(euler[2]))
+    # def timer_callback(self):
+    #     euler = self.read_orientation()
+    #     self.get_logger().info("Euler: " + str(euler[0]) + " " + str(euler[1]) + " " + str(euler[2]))
 
 
     def read_orientation(self):
@@ -52,11 +52,11 @@ class IMU(Node):
         return self.last_euler
 
 
-def main(args=None):
-    rclpy.init(args=args)
-    imu = IMU()
-    rclpy.spin(imu)
-    rclpy.shutdown()
+# def main(args=None):
+#     rclpy.init(args=args)
+#     imu = IMU()
+#     rclpy.spin(imu)
+#     rclpy.shutdown()
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
