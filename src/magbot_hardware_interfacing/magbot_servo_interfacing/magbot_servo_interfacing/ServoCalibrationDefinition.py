@@ -6,30 +6,30 @@ import math as m
 
 class motor_config():
     def __init__(self):
-        self.pwm_max = 2400
-        self.pwm_min = 370
+        self.pwm_max = 2500
+        self.pwm_min = 500
         self.kit = ServoKit(channels=16) #Defininng a new set of servos uising the Adafruit ServoKit LIbrary
         
         #DefinING servo indices
         ## FRONT LEFT
-        self.front_left_hip   = 10
-        self.front_left_upper = 9
-        self.front_left_lower = 8
+        self.front_left_hip   = 12
+        self.front_left_upper = 13
+        self.front_left_lower = 14
 
         ## FRONT RIGHT
-        self.front_right_hip   = 14
-        self.front_right_upper = 13
-        self.front_right_lower = 12
+        self.front_right_hip   = 8
+        self.front_right_upper = 9
+        self.front_right_lower = 10
 
         ## BACK LEFT
-        self.back_left_hip   = 6
+        self.back_left_hip   = 4
         self.back_left_upper = 5
-        self.back_left_lower = 4
+        self.back_left_lower = 6
 
         ## BACK RIGHT
-        self.back_right_hip   = 2
+        self.back_right_hip   = 0
         self.back_right_upper = 1
-        self.back_right_lower = 0
+        self.back_right_lower = 2
         """ SERVO INDICES, CALIBRATION MULTIPLIERS AND OFFSETS
             #   ROW:    which joint of leg to control 0:hip, 1: upper leg, 2: lower leg
             #   COLUMN: which leg to control. 0: front-right, 1: front-left, 2: back-right, 3: back-left.
@@ -39,9 +39,12 @@ class motor_config():
                 #  1  [front_right_upper, front_left_upper, back_right_upper, back_left_upper]
                 #  2  [front_right_lower, front_left_lower, back_right_lower, back_left_lower]] """
 
-        self.pins = np.array([[14,10,2,6], 
-                              [13,9,1,5], 
-                              [12,8,0,4]])
+        # self.pins = np.array([[14,10,2,6], 
+        #                       [13,9,1,5], 
+                            #   [12,8,0,4]])
+        self.pins = np.array([[8,12,0,4], 
+                              [9,13,1,5], 
+                              [10,14,2,6]])
 
         self.right_leg_servo_list = [self.front_right_upper,self.front_right_lower,self.back_right_upper,self.back_right_lower]
         self.left_leg_servos_list = [ self.front_left_upper, self.front_left_lower,self.back_left_upper,self.back_left_lower]

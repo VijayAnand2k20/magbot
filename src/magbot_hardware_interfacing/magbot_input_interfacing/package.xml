@@ -10,6 +10,7 @@
   <depend>rclpy</depend>
   <depend>magbot_control</depend>
   <depend>magbot_utilities</depend>
+  <depend>joy</depend>
   <depend>sensor_msgs</depend>
 
   <test_depend>ament_copyright</test_depend>

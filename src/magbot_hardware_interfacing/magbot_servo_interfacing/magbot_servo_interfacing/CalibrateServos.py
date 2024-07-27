@@ -4,7 +4,8 @@ import sys
 import numpy as np
 import math as m
 
-from magbot_servo_interfacing.ServoCalibrationDefinition import motor_config
+from ServoCalibrationDefinition import motor_config
+# from magbot_servo_interfacing.ServoCalibrationDefinition import motor_config
 
 # from ServoCalibrationDefinition import motor_config
 
@@ -94,9 +95,13 @@ else:
                 #  2  [front_right_lower, front_left_lower, back_right_lower, back_left_lower]] """
 
 offsets = np.array(
-                    [[70, 107, 115, 64],
-                    [35, 10, 15, 22],
-                    [16, 27, 35, 14]])
+                    [[82, 95, 98, 83],
+                    [0, 0, 0, 0],
+                    [90, 90, 90, 90]])
+# offsets = np.array(
+#                     [[70, 107, 115, 64],
+#                     [35, 10, 15, 22],
+#                     [16, 27, 35, 14]])
 
 
 servo_name = ""
@@ -109,8 +114,16 @@ if len(sys.argv) > 1 and sys.argv[1] in servo_dict:
         print('Magbot: Motors Relaxed.\n')
 
 if servo_name == "fr" or servo_name == "all":
+    # print(pos[0])
+    print(offsets[0,0]+pos[0])
     Magbot.moveAbsAngle(Magbot.front_right_hip  ,offsets[0,0]+pos[0])
+    # print(pos[1])
+    # print(offsets[1,0])
+    print(offsets[1,0]+pos[1])
     Magbot.moveAbsAngle(Magbot.front_right_upper,offsets[1,0]+pos[1])
+    # print(pos[2])
+    # print(offsets[2,0])
+    print(offsets[2,0]+pos[2])
     Magbot.moveAbsAngle(Magbot.front_right_lower,offsets[2,0]+pos[2])
 
 if servo_name == "fl" or servo_name == "all":
@@ -119,8 +132,11 @@ if servo_name == "fl" or servo_name == "all":
     Magbot.moveAbsAngle(Magbot.front_left_lower ,offsets[2,1]+pos[2])
 
 if servo_name == "br" or servo_name == "all":
+    print(offsets[0,2]+pos[0])
     Magbot.moveAbsAngle(Magbot.back_right_hip   ,offsets[0,2]+pos[0])
+    print(offsets[1,2]+pos[1])
     Magbot.moveAbsAngle(Magbot.back_right_upper ,offsets[1,2]+pos[1])
+    print(offsets[2,2]+pos[2])
     Magbot.moveAbsAngle(Magbot.back_right_lower ,offsets[2,2]+pos[2])
 
 if servo_name == "bl" or servo_name == "all":

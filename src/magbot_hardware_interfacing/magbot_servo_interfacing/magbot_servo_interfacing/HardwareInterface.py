@@ -8,7 +8,7 @@ from rclpy.node import Node
 class HardwareInterface(Node):
     def __init__(self,link):
         super().__init__('hardware_interface')
-        self.pwm_max = 2400
+        self.pwm_max = 2700
         self.pwm_min = 370
         self.link = link
         self.servo_angles = np.zeros((3,4))
@@ -24,9 +24,12 @@ class HardwareInterface(Node):
                 #  2  [front_right_lower, front_left_lower, back_right_lower, back_left_lower]] 
 
            'pins' define the physical pin of the servos on the servoboard """
-        self.pins = np.array([[14,10,2,6], 
-                              [13,9,1,5], 
-                              [12,8,0,4]])
+        self.pins = np.array([[8,12,0,4], 
+                              [9,13,1,5], 
+                              [10,14,2,6]])
+        # self.pins = np.array([[14,10,2,6], 
+        #                       [13,9,1,5], 
+        #                       [12,8,0,4]])
 
         """ 'servo_multipliers' and 'complementary_angle' both work to flip some angles, x, to (180-x) so that movement on each leg is consistent despite
             physical motor oritentation changes """
@@ -35,7 +38,7 @@ class HardwareInterface(Node):
                             [1, -1, 1, -1], 
                             [1, -1, 1, -1]])
         self.complementary_angle = np.array(
-                            [[180, 0, 0, 180], 
+                            [[0, 0, 0, 180], 
                             [0, 180, 0, 180], 
                             [0, 180, 0, 180]])
 
@@ -46,10 +49,22 @@ class HardwareInterface(Node):
             - Offsets for UPPER leg servos map allign the servo so that it is horizontal toward the back of the robot at an input of zero degrees, direct from the IK. 
             - Offsets for LOWER leg servos map allign the servo so that it is vertically down at zero degrees. Note that IK requires a transformation of
                 angle_sent_to_servo = (180-angle_from_IK) + 90 degrees to map to this physcial servo location.  """
+        # First try:
+        # self.physical_calibration_offsets = np.array(
+        #             [[95, 92, 95, 92],
+        #             [16, 166, 10, 170],
+        #             [155, 25, 170, 20]])
+        
+        # Own Caibration
         self.physical_calibration_offsets = np.array(
-                    [[75, 130, 113, 73],
-                    [29, 13, 33, 15],
-                    [26, 12, 30, 4]])
+                    [[82, 95, 98, 83],
+                    [0, 0, 0, 0],
+                    [90, 90, 90, 90]])
+        
+        # self.physical_calibration_offsets = np.array(
+        #             [[75, 130, 113, 73],
+        #             [29, 13, 33, 15],
+        #             [26, 12, 30, 4]])
         #applying calibration values to all servos
         self.create()
 
@@ -74,13 +89,15 @@ class HardwareInterface(Node):
         self.joint_angles_to_servo_angles(possible_joint_angles)
 
         # print('Final angles for actuation: ',self.servo_angles)    
+        # print(self.servo_angles)
         for leg_index in range(4):
             for axis_index in range(3):
                 try:
                     self.kit.servo[self.pins[axis_index,leg_index]].angle = self.servo_angles[axis_index,leg_index]
-                except:
+                except Exception as e:
                     # rospy.logwarn("Warning - I2C IO error")
-                    self.get_logger().warn("Warning - I2C IO error")
+                    # self.get_logger().warn("Warning - I2C IO error")
+                    self.get_logger().warn(str(e))
 ## HERE ##
 
     ##  This method is used only in the calibrate servos file will make something similar to command individual actuators. 

@@ -6,3 +6,4 @@ install/
 log/
 .vscode/*
 src/.vscode/*
+magbot_env/

@@ -26,7 +26,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'magbot = magbot.magbot_driver:main'
+            'magbot = magbot.magbot_driver:main',
+            'run_magbot = magbot.run_robot:main',
+
         ],
     },
 )

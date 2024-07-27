@@ -85,7 +85,7 @@ def leg_explicit_inverse_kinematics(r_body_foot, leg_index, config):
     # handling mathematically invalid input, i.e., point too far away to reach
     if len_B >= (config.L2 + config.L3): 
         len_B = (config.L2 + config.L3) * 0.8
-        get_logger('leg_explicit_inverse_kinematics').warn('target coordinate: [%f %f %f] too far away', x, y, z)
+        get_logger('leg_explicit_inverse_kinematics').warn(f'target coordinate: [{x} {y} {z}] too far away')
     
     # b_1 : angle between +ve x-axis and len_B (0 <= b_1 < 2pi)
     # b_2 : angle between len_B and link_2

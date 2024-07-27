@@ -6,7 +6,7 @@ from rclpy.node import Node
 import sys
 from std_msgs.msg import Float64
 import signal
-from magbot_peripheral_interfacing.msg import ElectricalMeasurements
+from interfaces_pkg.msg import ElectricalMeasurements
 
 
 #Fetching is_sim and is_physical from arguments
@@ -35,7 +35,7 @@ def signal_handler(sig, frame):
 
 class MagBotNode(Node):
     def __init__(self, use_imu=False):
-        super().__init__('magbot')
+        super().__init__('magbot_run')
         self.use_imu = use_imu
         self.initialize()
     
@@ -92,10 +92,10 @@ class MagBotNode(Node):
         last_loop = time.time()
 
         self.get_logger().info(f"Summary of gait parameters:")
-        self.get_logger().info(f"overlap time: {config.overlap_time}")
-        self.get_logger().info(f"swing time: {config.swing_time}")
-        self.get_logger().info(f"z clearance: {config.z_clearance}")
-        self.get_logger().info(f"x shift: {config.x_shift}")
+        self.get_logger().info(f"overlap time: {self.config.overlap_time}")
+        self.get_logger().info(f"swing time: {self.config.swing_time}")
+        self.get_logger().info(f"z clearance: {self.config.z_clearance}")
+        self.get_logger().info(f"x shift: {self.config.x_shift}")
 
         # Wait until the activate button has been pressed
         loop = 0
@@ -169,4 +169,5 @@ class MagBotNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     magbot_node = MagBotNode(use_imu=True)
+    magbot_node.initialize()
     magbot_node.run()

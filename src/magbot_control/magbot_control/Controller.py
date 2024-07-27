@@ -13,6 +13,7 @@ from transforms3d.axangles import axangle2mat
 # import rospy
 # import rclpy
 from rclpy.node import Node
+from rclpy.time import Time
 from rclpy.clock import ROSClock
 
 from geometry_msgs.msg import Point
@@ -89,31 +90,23 @@ class Controller(Node):
     def publish_task_space_command(self, rotated_foot_locations):
 
         task_space_message = TaskSpace()
-        task_space_message.fr_foot = Point(rotated_foot_locations[0, 0] - self.config.LEG_ORIGINS[0, 0], rotated_foot_locations[1,
-                                           0] - self.config.LEG_ORIGINS[1, 0], rotated_foot_locations[2, 0] - self.config.LEG_ORIGINS[2, 0])
-        task_space_message.fl_foot = Point(rotated_foot_locations[0, 1] - self.config.LEG_ORIGINS[0, 1], rotated_foot_locations[1,
-                                           1] - self.config.LEG_ORIGINS[1, 1], rotated_foot_locations[2, 1] - self.config.LEG_ORIGINS[2, 1])
-        task_space_message.rr_foot = Point(rotated_foot_locations[0, 2] - self.config.LEG_ORIGINS[0, 2], rotated_foot_locations[1,
-                                           2] - self.config.LEG_ORIGINS[1, 2], rotated_foot_locations[2, 2] - self.config.LEG_ORIGINS[2, 2])
-        task_space_message.rl_foot = Point(rotated_foot_locations[0, 3] - self.config.LEG_ORIGINS[0, 3], rotated_foot_locations[1,
-                                           3] - self.config.LEG_ORIGINS[1, 3], rotated_foot_locations[2, 3] - self.config.LEG_ORIGINS[2, 3])
+        task_space_message.fr_foot = Point(x=rotated_foot_locations[0, 0] - self.config.LEG_ORIGINS[0, 0], y=rotated_foot_locations[1,0] - self.config.LEG_ORIGINS[1, 0],z=rotated_foot_locations[2, 0] - self.config.LEG_ORIGINS[2, 0])
+        task_space_message.fl_foot = Point(x=rotated_foot_locations[0, 1] - self.config.LEG_ORIGINS[0, 1], y=rotated_foot_locations[1,1] - self.config.LEG_ORIGINS[1, 1],z=rotated_foot_locations[2, 1] - self.config.LEG_ORIGINS[2, 1])
+        task_space_message.rr_foot = Point(x=rotated_foot_locations[0, 2] - self.config.LEG_ORIGINS[0, 2], y=rotated_foot_locations[1,2] - self.config.LEG_ORIGINS[1, 2],z=rotated_foot_locations[2, 2] - self.config.LEG_ORIGINS[2, 2])
+        task_space_message.rl_foot = Point(x=rotated_foot_locations[0, 3] - self.config.LEG_ORIGINS[0, 3], y=rotated_foot_locations[1,3] - self.config.LEG_ORIGINS[1, 3],z=rotated_foot_locations[2, 3] - self.config.LEG_ORIGINS[2, 3])
         # task_space_message.header = Header(stamp = rospy.Time.now())
-        task_space_message.header = Header(stamp=ROSClock.now())
+        task_space_message.header = Header(stamp=self.get_clock().now().to_msg())
         self.task_space_pub.publish(task_space_message)
 
     def publish_joint_space_command(self, angle_matrix):
 
         joint_space_message = JointSpace()
-        joint_space_message.fr_foot = Angle(degrees(angle_matrix[0, 0]), degrees(
-            angle_matrix[1, 0]), degrees(angle_matrix[2, 0]))
-        joint_space_message.fl_foot = Angle(degrees(angle_matrix[0, 1]), degrees(
-            angle_matrix[1, 1]), degrees(angle_matrix[2, 1]))
-        joint_space_message.rr_foot = Angle(degrees(angle_matrix[0, 2]), degrees(
-            angle_matrix[1, 2]), degrees(angle_matrix[2, 2]))
-        joint_space_message.rl_foot = Angle(degrees(angle_matrix[0, 3]), degrees(
-            angle_matrix[1, 3]), degrees(angle_matrix[2, 3]))
+        joint_space_message.fr_foot = Angle(theta1=degrees(angle_matrix[0, 0]), theta2=degrees(angle_matrix[1, 0]), theta3=degrees(angle_matrix[2, 0]))
+        joint_space_message.fl_foot = Angle(theta1=degrees(angle_matrix[0, 1]), theta2=degrees(angle_matrix[1, 1]), theta3=degrees(angle_matrix[2, 1]))
+        joint_space_message.rr_foot = Angle(theta1=degrees(angle_matrix[0, 2]), theta2=degrees(angle_matrix[1, 2]), theta3=degrees(angle_matrix[2, 2]))
+        joint_space_message.rl_foot = Angle(theta1=degrees(angle_matrix[0, 3]), theta2=degrees(angle_matrix[1, 3]), theta3=degrees(angle_matrix[2, 3]))
         # joint_space_message.header = Header(stamp = rospy.Time.now())
-        joint_space_message.header = Header(stamp=ROSClock.now())
+        joint_space_message.header = Header(stamp=self.get_clock().now().to_msg())
         self.joint_space_pub.publish(joint_space_message)
 
     def run(self, state, command):
@@ -137,8 +130,7 @@ class Controller(Node):
 
         if previous_state != state.behavior_state:
             # rospy.loginfo("State changed from %s to %s", str(previous_state), str(state.behavior_state))
-            self.get_logger().info("State changed from %s to %s",
-                                   str(previous_state), str(state.behavior_state))
+            self.get_logger().info(f"State changed from {str(previous_state)} to {str(state.behavior_state)}")
 
         if state.behavior_state == BehaviorState.TROT:
             state.foot_locations, contact_modes = self.step_gait(

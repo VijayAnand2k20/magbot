@@ -8,27 +8,27 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument('is_sim', default_value='0'),
         DeclareLaunchArgument('is_physical', default_value='1'),
-        DeclareLaunchArgument('use_joystick', default_value='1'),
-        DeclareLaunchArgument('use_keyboard', default_value='0'),
-        DeclareLaunchArgument('serial_port', default_value='/dev/ttyS0'),
+        DeclareLaunchArgument('use_joystick', default_value='0'),
+        DeclareLaunchArgument('use_keyboard', default_value='1'),
+        # DeclareLaunchArgument('serial_port', default_value='/dev/ttyS0'),
         DeclareLaunchArgument('use_imu', default_value='0'),
 
         GroupAction([
-            Node(
-                package='rosserial_python',
-                executable='serial_node.py',
-                name='magbot_rosserial',
-                parameters=[{'serial_port': LaunchConfiguration('serial_port')}],
-                output='screen',
-                condition=IfCondition(LaunchConfiguration('is_physical'))
-            ),
-            Node(
-                package='magbot_peripheral_interfacing',
-                executable='magbot_lcd_interfacing',
-                name='magbot_LCD_node',
-                output='screen',
-                condition=IfCondition(LaunchConfiguration('is_physical'))
-            )
+            # Node(
+            #     package='rosserial_python',
+            #     executable='serial_node.py',
+            #     name='magbot_rosserial',
+            #     parameters=[{'serial_port': LaunchConfiguration('serial_port')}],
+            #     output='screen',
+            #     condition=IfCondition(LaunchConfiguration('is_physical'))
+            # ),
+            # Node(
+            #     package='magbot_peripheral_interfacing',
+            #     executable='magbot_lcd_interfacing',
+            #     name='magbot_LCD_node',
+            #     output='screen',
+            #     condition=IfCondition(LaunchConfiguration('is_physical'))
+            # )
         ]),
 
         GroupAction([
@@ -36,7 +36,7 @@ def generate_launch_description():
                 package='joy',
                 executable='joy_node',
                 name='JOYSTICK',
-                parameters=[{'autorepeat_rate': 30}],
+                parameters=[{'autorepeat_rate': 30.0}],
                 output='screen',
                 condition=IfCondition(LaunchConfiguration('use_joystick'))
             )
@@ -54,7 +54,7 @@ def generate_launch_description():
 
         Node(
             package='magbot',
-            executable='magbot_driver.py',
+            executable='magbot',
             name='magbot',
             arguments=[
                 LaunchConfiguration('is_sim'), 
