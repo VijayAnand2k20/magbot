@@ -17,7 +17,7 @@ class motor_config():
         self.front_left_lower = 14
 
         ## FRONT RIGHT
-        self.front_right_hip   = 8
+        self.front_right_hip   = 7
         self.front_right_upper = 9
         self.front_right_lower = 10
 
@@ -42,7 +42,7 @@ class motor_config():
         # self.pins = np.array([[14,10,2,6], 
         #                       [13,9,1,5], 
                             #   [12,8,0,4]])
-        self.pins = np.array([[8,12,0,4], 
+        self.pins = np.array([[7,12,0,4], 
                               [9,13,1,5], 
                               [10,14,2,6]])
 

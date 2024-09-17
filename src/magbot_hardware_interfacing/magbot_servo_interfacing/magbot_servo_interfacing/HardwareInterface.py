@@ -12,8 +12,27 @@ class HardwareInterface(Node):
         self.pwm_min = 370
         self.link = link
         self.servo_angles = np.zeros((3,4))
-        self.kit = ServoKit(channels=16) #Defininng a new set of servos uising the Adafruit ServoKit LIbrary
-        
+    #    # self.kit = ServoKit(channels=16) #Defininng a new set of servos uising the Adafruit ServoKit LIbrary
+    #     try:
+    #         self.kit = ServoKit(channels=16)
+    #         print("ServoKit initialized successfully")
+    #     except Exception as e:
+    #         print(f"Error initializing ServoKit: {str(e)}")
+    #         # You might want to raise the exception again or handle it differently
+    #         raise
+
+        self.use_hardware = True  # Set this based on your needs
+
+        if self.use_hardware:
+                try:
+                    self.kit = ServoKit(channels=16)
+                    print("ServoKit initialized successfully")
+                except Exception as e:
+                   print(f"Error initializing ServoKit: {str(e)}")
+                   self.kit = None
+        else:
+            print("Running in simulation mode without ServoKit")
+            self.kit = None
         """ SERVO INDICES, CALIBRATION MULTIPLIERS AND OFFSETS
             #   ROW:    which joint of leg to control 0:hip, 1: upper leg, 2: lower leg
             #   COLUMN: which leg to control. 0: front-right, 1: front-left, 2: back-right, 3: back-left.
@@ -24,7 +43,7 @@ class HardwareInterface(Node):
                 #  2  [front_right_lower, front_left_lower, back_right_lower, back_left_lower]] 
 
            'pins' define the physical pin of the servos on the servoboard """
-        self.pins = np.array([[8,12,0,4], 
+        self.pins = np.array([[7,12,0,4], 
                               [9,13,1,5], 
                               [10,14,2,6]])
         # self.pins = np.array([[14,10,2,6], 

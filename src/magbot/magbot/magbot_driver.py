@@ -49,6 +49,7 @@ class MagbotDriver(Node):
 
         self.is_sim = is_sim
         self.is_physical = is_physical
+        # self.is_physical = False
         # self.use_imu = use_imu
         self.use_imu = False
 
