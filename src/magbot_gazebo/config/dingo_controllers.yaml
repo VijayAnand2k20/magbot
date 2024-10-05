@@ -1,0 +1,103 @@
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 50  # Hz
+
+#     joint_state_broadcaster:
+#       type: joint_state_broadcaster/JointStateBroadcaster
+
+#     dingo_controller:
+#       type: joint_trajectory_controller/JointTrajectoryController
+
+# dingo_controller:
+#   ros__parameters:
+#     joints:
+#       - FR_theta1
+#       - FR_theta2
+#       - FR_theta3
+#       - FL_theta1
+#       - FL_theta2
+#       - FL_theta3
+#       - RR_theta1
+#       - RR_theta2
+#       - RR_theta3
+#       - RL_theta1
+#       - RL_theta2
+#       - RL_theta3
+#     interface_name: effort
+#     command_interfaces:
+#       - effort
+#     state_interfaces:
+#       - position
+#       - velocity
+controller_manager:
+  ros__parameters:
+    update_rate: 50  # You can adjust the rate as needed
+
+    # Joint State Controller
+    joint_states_controller:
+      type: joint_state_broadcaster/JointStateBroadcaster
+      publish_rate: 25
+
+    # FL Controllers ------------------------------------------------------------ 
+    FL_theta1:
+      type: effort_controllers/JointPositionController
+      joint: FL_theta1
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    FL_theta2:
+      type: effort_controllers/JointPositionController
+      joint: FL_theta2
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    FL_theta3:
+      type: effort_controllers/JointPositionController
+      joint: FL_theta3
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    # FR Controllers ------------------------------------------------------------ 
+    FR_theta1:
+      type: effort_controllers/JointPositionController
+      joint: FR_theta1
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    FR_theta2:
+      type: effort_controllers/JointPositionController
+      joint: FR_theta2
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    FR_theta3:
+      type: effort_controllers/JointPositionController
+      joint: FR_theta3
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    # RR Controllers ------------------------------------------------------------ 
+    RR_theta1:
+      type: effort_controllers/JointPositionController
+      joint: RR_theta1
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    RR_theta2:
+      type: effort_controllers/JointPositionController
+      joint: RR_theta2
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    RR_theta3:
+      type: effort_controllers/JointPositionController
+      joint: RR_theta3
+      pid: {p: 9.0, i: 0.0, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    # RL Controllers ------------------------------------------------------------ 
+    RL_theta1:
+      type: effort_controllers/JointPositionController
+      joint: RL_theta1
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    RL_theta2:
+      type: effort_controllers/JointPositionController
+      joint: RL_theta2
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
+
+    RL_theta3:
+      type: effort_controllers/JointPositionController
+      joint: RL_theta3
+      pid: {p: 9.0, i: 0.03, d: 0.3055, i_clamp_min: -1000, i_clamp_max: 1000}
