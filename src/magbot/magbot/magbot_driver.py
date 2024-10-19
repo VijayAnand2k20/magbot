@@ -25,6 +25,9 @@ else:
     is_physical = int(args[2])
     use_imu = int(args[3])
 
+# is_sim = 1
+# is_physical = 0
+
 from magbot_control.Controller import Controller
 from magbot_input_interfacing.InputInterface import InputInterface
 from magbot_control.State import State, BehaviorState
@@ -47,9 +50,10 @@ class MagbotDriver(Node):
         # self.rate = self.create_rate(self.message_rate)
         self.get_logger().info("Initializing node")
 
-        self.is_sim = is_sim
-        self.is_physical = is_physical
-        # self.is_physical = False
+        # self.is_sim = is_sim
+        self.is_sim = True
+        # self.is_physical = is_physical
+        self.is_physical = False
         # self.use_imu = use_imu
         self.use_imu = False
 
@@ -71,18 +75,18 @@ class MagbotDriver(Node):
         self.external_commands_enabled = 0
 
         if self.is_sim:
-            self.sim_command_topics = ["/magbot_controller/FR_theta1/command",
-                    "/magbot_controller/FR_theta2/command",
-                    "/magbot_controller/FR_theta3/command",
-                    "/magbot_controller/FL_theta1/command",
-                    "/magbot_controller/FL_theta2/command",
-                    "/magbot_controller/FL_theta3/command",
-                    "/magbot_controller/RR_theta1/command",
-                    "/magbot_controller/RR_theta2/command",
-                    "/magbot_controller/RR_theta3/command",
-                    "/magbot_controller/RL_theta1/command",
-                    "/magbot_controller/RL_theta2/command",
-                    "/magbot_controller/RL_theta3/command"]
+            self.sim_command_topics = ["/dingo_controller/FR_theta1/command",
+                    "/dingo_controller/FR_theta2/command",
+                    "/dingo_controller/FR_theta3/command",
+                    "/dingo_controller/FL_theta1/command",
+                    "/dingo_controller/FL_theta2/command",
+                    "/dingo_controller/FL_theta3/command",
+                    "/dingo_controller/RR_theta1/command",
+                    "/dingo_controller/RR_theta2/command",
+                    "/dingo_controller/RR_theta3/command",
+                    "/dingo_controller/RL_theta1/command",
+                    "/dingo_controller/RL_theta2/command",
+                    "/dingo_controller/RL_theta3/command"]
 
             self.sim_publisher_array = []
             for i in range(len(self.sim_command_topics)):
@@ -325,12 +329,21 @@ class MagbotDriver(Node):
         elif self.currently_estopped == 1:
             self.get_logger().info("ERROR: Robot currently estopped. Please release before trying to send commands")
     
+    # def publish_joints_to_sim(self, joint_angles):
+    #     rows, cols = joint_angles.shape
+    #     i = 0
+    #     for col in range(cols):
+    #         for row in range(rows):
+    #             self.sim_publisher_array[i].publish(joint_angles[row,col])
+    #             i = i + 1
     def publish_joints_to_sim(self, joint_angles):
         rows, cols = joint_angles.shape
         i = 0
         for col in range(cols):
             for row in range(rows):
-                self.sim_publisher_array[i].publish(joint_angles[row,col])
+                msg = Float64()
+                msg.data = float(joint_angles[row, col])
+                self.sim_publisher_array[i].publish(msg)
                 i = i + 1
 
 
@@ -344,13 +357,13 @@ def main():
     # rospy.init_node("magbot_driver") 
     rclpy.init(args=args)
     signal.signal(signal.SIGINT, signal_handler)
-    magbot = MagbotDriver(is_sim, is_physical, use_imu)
+    magbot = MagbotDriver(1, 0, 0)
     # magbot.run()
 
     executor = rclpy.executors.MultiThreadedExecutor()
     executor.add_node(magbot)
     executor.add_node(magbot.input_interface)
-    executor.add_node(magbot.hardware_interface)
+    # executor.add_node(magbot.hardware_interface)
     executor.add_node(magbot.controller)
     
     try:
@@ -363,7 +376,7 @@ def main():
         magbot.destroy_node()
         magbot.input_interface.destroy_node()
         magbot.controller.destroy_node()
-        magbot.hardware_interface.destroy_node()
+        # magbot.hardware_interface.destroy_node()
         rclpy.shutdown()
 
 

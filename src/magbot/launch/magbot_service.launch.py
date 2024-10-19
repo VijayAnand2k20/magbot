@@ -6,8 +6,8 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     return LaunchDescription([
-        DeclareLaunchArgument('is_sim', default_value='0'),
-        DeclareLaunchArgument('is_physical', default_value='1'),
+        DeclareLaunchArgument('is_sim', default_value='1'),
+        DeclareLaunchArgument('is_physical', default_value='0'),
         DeclareLaunchArgument('use_joystick', default_value='0'),
         DeclareLaunchArgument('use_keyboard', default_value='1'),
         # DeclareLaunchArgument('serial_port', default_value='/dev/ttyS0'),

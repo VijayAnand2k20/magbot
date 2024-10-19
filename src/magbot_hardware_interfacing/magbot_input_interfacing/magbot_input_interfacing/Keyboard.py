@@ -388,7 +388,7 @@ class Keyboard(Node):
         for device in devices:
             self.get_logger().info(f"Found device: {device.name}, {device.path}")
             # !!!! Find and choose the proper event number !!!!
-            if (evdev.ecodes.EV_KEY in device.capabilities()) and ('event10' in device.path):
+            if (evdev.ecodes.EV_KEY in device.capabilities()) and ('event4' in device.path):
                 # if not ok:
                 #     ok = not ok
                     # continue
