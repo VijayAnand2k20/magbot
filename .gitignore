@@ -3,7 +3,7 @@
 **/__pycache__
 build/
 install/
-log/
+log/*
 .vscode/*
 src/.vscode/*
 magbot_env/

@@ -260,33 +260,33 @@ def generate_launch_description():
     )
     
     # Node to spawn the robot in Gazebo
-    # spawn_robot = Node(
-    #     package='gazebo_ros',
-    #     executable='spawn_entity.py',
-    #     arguments=['-topic', 'robot_description', '-entity', 'magbot', '-z', '0.1'],
-    #     output='screen'
-    # )
-    spawn_robot = ExecuteProcess(
-        cmd=[
-            'ros2', 'run', 'gazebo_ros', 'spawn_entity.py',
-            '-entity', 'magbot',
-            '-file', urdf_file,
-            '-z', '3',
-            '-J', 'FR_theta2', '0.72646626',
-            '-J', 'FL_theta2', '0.72646626',
-            '-J', 'RR_theta2', '0.72646626',
-            '-J', 'RL_theta2', '0.72646626',
-            '-J', 'FR_theta1', '0.0',
-            '-J', 'FL_theta1', '0.0',
-            '-J', 'RR_theta1', '0.0',
-            '-J', 'RL_theta1', '0.0',
-            '-J', 'FR_theta3', '0.0',
-            '-J', 'FL_theta3', '0.0',
-            '-J', 'RR_theta3', '0.0',
-            '-J', 'RL_theta3', '0.0'
-        ],
+    spawn_robot = Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        arguments=['-topic', 'robot_description', '-entity', 'magbot', '-z', '0.1'],
         output='screen'
     )
+    # spawn_robot = ExecuteProcess(
+    #     cmd=[
+    #         'ros2', 'run', 'gazebo_ros', 'spawn_entity.py',
+    #         '-entity', 'magbot',
+    #         '-file', urdf_file,
+    #         '-z', '3',
+    #         '-J', 'FR_theta2', '0.72646626',
+    #         '-J', 'FL_theta2', '0.72646626',
+    #         '-J', 'RR_theta2', '0.72646626',
+    #         '-J', 'RL_theta2', '0.72646626',
+    #         '-J', 'FR_theta1', '0.0',
+    #         '-J', 'FL_theta1', '0.0',
+    #         '-J', 'RR_theta1', '0.0',
+    #         '-J', 'RL_theta1', '0.0',
+    #         '-J', 'FR_theta3', '0.0',
+    #         '-J', 'FL_theta3', '0.0',
+    #         '-J', 'RR_theta3', '0.0',
+    #         '-J', 'RL_theta3', '0.0'
+    #     ],
+    #     output='screen'
+    # )
 
     controller_manager = Node(
         package='controller_manager',
