@@ -2,6 +2,8 @@
   "name": "humble desktop",
   "dockerFile": "Dockerfile",
   "runArgs": [
+    "--env", "DISPLAY=${env:DISPLAY}",
+    "--volume", "/tmp/.X11-unix:/tmp/.X11-unix",
     "--privileged",
     "--network=host"
   ],
@@ -9,5 +11,6 @@
   "workspaceFolder": "/${localWorkspaceFolderBasename}",
   "mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind"
-  ]
+  ],
+  "postCreateCommand": "echo 'Remember to run xhost +local:docker on your host!'"
 }

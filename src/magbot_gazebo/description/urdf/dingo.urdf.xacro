@@ -889,6 +889,9 @@
   <gazebo>
     <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
       <parameters>$(find magbot_gazebo)/config/dingo_controllers.yaml</parameters>
+       <!-- <ros>
+       <namespace>/dingo_controller</namespace>
+     </ros> -->
     </plugin>
   </gazebo>
 

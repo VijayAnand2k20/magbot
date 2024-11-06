@@ -137,71 +137,189 @@
 #       joints:
 #         - RL_theta3  # Replace with your actual joint name
 
+
+##############################################################NEWWWWWWWWWWWWWWWWWWW
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 100  # Hz
+
+#     # Define the individual controllers with corresponding joints
+#     FR_theta1:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - FR_theta1  # Ensure this matches your URDF joint name
+#     FR_theta2:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - FR_theta2  # Ensure this matches your URDF joint name
+#     FR_theta3:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - FR_theta3  # Ensure this matches your URDF joint name
+#     FL_theta1:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - FL_theta1  # Ensure this matches your URDF joint name
+#     FL_theta2:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - FL_theta2  # Ensure this matches your URDF joint name
+#     FL_theta3:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - FL_theta3  # Ensure this matches your URDF joint name
+#     RR_theta1:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - RR_theta1  # Ensure this matches your URDF joint name
+#     RR_theta2:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - RR_theta2  # Ensure this matches your URDF joint name
+#     RR_theta3:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - RR_theta3  # Ensure this matches your URDF joint name
+#     RL_theta1:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - RL_theta1  # Ensure this matches your URDF joint name
+#     RL_theta2:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - RL_theta2  # Ensure this matches your URDF joint name
+#     RL_theta3:
+#       type: effort_controllers/JointGroupEffortController
+#       ros__parameters:
+#         joints:
+#           - RL_theta3  # Ensure this matches your URDF joint name
+
+######################################################NEEEEWWWWWWWWWWWWW
+
 controller_manager:
   ros__parameters:
-    update_rate: 100  # Hz
+    update_rate: 100  # Set the update rate for the controller manager
 
-    # Define the individual controllers with corresponding joints
-    FR_theta1:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - FR_theta1  # Ensure this matches your URDF joint name
-    FR_theta2:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - FR_theta2  # Ensure this matches your URDF joint name
-    FR_theta3:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - FR_theta3  # Ensure this matches your URDF joint name
-    FL_theta1:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - FL_theta1  # Ensure this matches your URDF joint name
-    FL_theta2:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - FL_theta2  # Ensure this matches your URDF joint name
-    FL_theta3:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - FL_theta3  # Ensure this matches your URDF joint name
-    RR_theta1:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - RR_theta1  # Ensure this matches your URDF joint name
-    RR_theta2:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - RR_theta2  # Ensure this matches your URDF joint name
-    RR_theta3:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - RR_theta3  # Ensure this matches your URDF joint name
-    RL_theta1:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - RL_theta1  # Ensure this matches your URDF joint name
-    RL_theta2:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - RL_theta2  # Ensure this matches your URDF joint name
-    RL_theta3:
-      type: effort_controllers/JointGroupEffortController
-      ros__parameters:
-        joints:
-          - RL_theta3  # Ensure this matches your URDF joint name
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+      parameters:
+        state_publish_rate: 50
+
+    # Define dingo_controller as a JointGroupPositionController
+    dingo_controller:
+      type: position_controllers/JointGroupPositionController
+
+dingo_controller:
+  ros__parameters:
+    joints:
+      - FL_theta1
+      - FL_theta2
+      - FL_theta3
+      - FR_theta1
+      - FR_theta2
+      - FR_theta3
+      - RR_theta1
+      - RR_theta2
+      - RR_theta3
+      - RL_theta1
+      - RL_theta2
+      - RL_theta3
+
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 100  # Set the update rate for the controller manager
+
+#     joint_state_broadcaster:
+#       type: joint_state_broadcaster/JointStateBroadcaster
+#       parameters:
+#         state_publish_rate: 50
+#     dingo_controller:
+#       type: position_controllers/JointGroupPositionController 
+
+# dingo_controller:
+#   ros__parameters:
+#     # FL Controllers
+#     FL_joint_group:
+#       type: position_controllers/JointGroupPositionController 
+#       joints:
+#         - FL_theta1
+#         - FL_theta2
+#         - FL_theta3
+
+#     # FR Controllers
+#     FR_joint_group:
+#       type: position_controllers/JointGroupPositionController
+#       joints:
+#         - FR_theta1
+#         - FR_theta2
+#         - FR_theta3
+
+#     # RR Controllers
+#     RR_joint_group:
+#       type: position_controllers/JointGroupPositionController
+#       joints:
+#         - RR_theta1
+#         - RR_theta2
+#         - RR_theta3
+
+#     # RL Controllers
+#     RL_joint_group:
+#       type: position_controllers/JointGroupPositionController
+#       joints:
+#         - RL_theta1
+#         - RL_theta2
+#         - RL_theta3
+
+# controller_manager:
+  # ros__parameters:
+  #   update_rate: 100
+  #   joint_state_broadcaster:
+  #     type: joint_state_broadcaster/JointStateBroadcaster
+  #     parameters:
+  #       state_publish_rate: 50
+#     joint_position_controller:
+#       type: position_controllers/JointGroupPositionController
+#       joints:
+#         - joint1
+#         - joint2
+#         - joint3
+#         - joint4
+#       parameters:
+#         state_publish_rate: 50
+#         command_interfaces: ["position"]
+#     joint_velocity_controller:
+#       type: velocity_controllers/JointGroupVelocityController
+#       joints:
+#         - joint1
+#         - joint2
+#         - joint3
+#         - joint4
+#       parameters:
+#         state_publish_rate: 50
+#         command_interfaces: ["velocity"]
+#     joint_effort_controller:
+#       type: effort_controllers/JointGroupEffortController
+#       joints:
+#         - joint1
+#         - joint2
+#         - joint3
+#         - joint4
+#       parameters:
+#         state_publish_rate: 50
+#         command_interfaces: ["effort"]
+
+
 
 
 # controller_manager:

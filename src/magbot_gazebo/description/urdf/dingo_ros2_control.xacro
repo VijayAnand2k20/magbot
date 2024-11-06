@@ -7,121 +7,89 @@
         <plugin>gazebo_ros2_control/GazeboSystem</plugin>
       </hardware>
 
-      <joint name="FR_theta1">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-      </joint>
-
-      <joint name="FR_theta2">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-      </joint>
-
-      <joint name="FR_theta3">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-      </joint>
-
+      <!-- FL Joint Group -->
       <joint name="FL_theta1">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
 
       <joint name="FL_theta2">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
 
       <joint name="FL_theta3">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
 
+      <!-- FR Joint Group -->
+      <joint name="FR_theta1">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+
+      <joint name="FR_theta2">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+
+      <joint name="FR_theta3">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+
+      <!-- RR Joint Group -->
       <joint name="RR_theta1">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
 
       <joint name="RR_theta2">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
 
       <joint name="RR_theta3">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
 
+      <!-- RL Joint Group -->
       <joint name="RL_theta1">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
 
       <joint name="RL_theta2">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
 
       <joint name="RL_theta3">
-        <command_interface name="effort">
-          <param name="min">-${effort_limit}</param>
-          <param name="max">${effort_limit}</param>
-        </command_interface>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>

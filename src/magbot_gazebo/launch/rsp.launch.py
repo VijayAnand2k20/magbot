@@ -263,7 +263,7 @@ def generate_launch_description():
     spawn_robot = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
-        arguments=['-topic', 'robot_description', '-entity', 'magbot', '-z', '0.1'],
+        arguments=['-topic', 'robot_description', '-entity', 'magbot', '-z', '3'],
         output='screen'
     )
     # spawn_robot = ExecuteProcess(
@@ -291,25 +291,42 @@ def generate_launch_description():
     controller_manager = Node(
         package='controller_manager',
         executable='ros2_control_node',
+        namespace='dingo_controller',
         parameters=[PathJoinSubstitution([
             FindPackageShare('magbot_gazebo'), 'config', 'dingo_controllers.yaml'
         ])],
         output='screen',
-        namespace='dingo_controller'
     )
 
     # Load robot controller
-    load_robot_controller = Node(
+    # load_robot_controller = Node(
+    #     package='controller_manager',
+    #     executable='spawner',
+    #     name='controller_spawner',
+    #     output='screen',
+    #     arguments=[
+    #         # 'FR_theta1', 'FR_theta2', 'FR_theta3',
+    #         # 'FL_theta1', 'FL_theta2', 'FL_theta3',
+    #         # 'RR_theta1', 'RR_theta2', 'RR_theta3',
+    #         # 'RL_theta1', 'RL_theta2', 'RL_theta3'
+    #         'joint_state_broadcaster', 'FL_joint_group', 'FR_joint_group', 'RR_joint_group', 'RL_joint_group'
+    #     ]
+    # )
+    joint_state_broadcaster_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        name='controller_spawner',
-        output='screen',
-        arguments=[
-            'FR_theta1', 'FR_theta2', 'FR_theta3',
-            'FL_theta1', 'FL_theta2', 'FL_theta3',
-            'RR_theta1', 'RR_theta2', 'RR_theta3',
-            'RL_theta1', 'RL_theta2', 'RL_theta3'
-        ]
+        # namespace='dingo_controller',
+        arguments=['joint_state_broadcaster'],
+        output='screen'
+    )
+
+    # Spawner node to activate the dingo_controller
+    dingo_controller_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        # namespace='dingo_controller',
+        arguments=['dingo_controller'],
+        output='screen'
     )
 
     # Robot State Publisher
@@ -317,6 +334,7 @@ def generate_launch_description():
         package='robot_state_publisher',
         executable='robot_state_publisher',
         name='robot_state_publisher',
+        # namespace='dingo_controller',
         output='screen',
         parameters=[{'publish_frequency': 10.0,
                      'robot_description': robot_description,
@@ -329,23 +347,8 @@ def generate_launch_description():
         robot_state_publisher,
         gazebo,
         controller_manager,
-        # RegisterEventHandler(
-        #     event_handler=OnProcessExit(
-        #         target_action=spawn_robot,
-        #         on_exit=[load_robot_controller]
-        #     )
-        # ),
+        joint_state_broadcaster_spawner,
+        dingo_controller_spawner,
+        # load_robot_controller,
         spawn_robot,
-        # RegisterEventHandler(
-        #     event_handler=OnProcessExit(
-        #         target_action=robot_state_publisher,
-        #         on_exit=[spawn_robot]
-        #     )
-        # ),
-        RegisterEventHandler(
-            event_handler=OnProcessExit(
-                target_action=spawn_robot,
-                on_exit=[load_robot_controller]
-            )
-        ),
     ])
