@@ -12,6 +12,7 @@ from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
 import sys
 from std_msgs.msg import Float64
+from std_msgs.msg import Float64MultiArray
 import signal
 
 #Fetching is_sim and is_physical from arguments
@@ -75,23 +76,25 @@ class MagbotDriver(Node):
         self.external_commands_enabled = 0
 
         if self.is_sim:
-            self.sim_command_topics = ["/dingo_controller/FR_theta1/command",
-                    "/dingo_controller/FR_theta2/command",
-                    "/dingo_controller/FR_theta3/command",
-                    "/dingo_controller/FL_theta1/command",
-                    "/dingo_controller/FL_theta2/command",
-                    "/dingo_controller/FL_theta3/command",
-                    "/dingo_controller/RR_theta1/command",
-                    "/dingo_controller/RR_theta2/command",
-                    "/dingo_controller/RR_theta3/command",
-                    "/dingo_controller/RL_theta1/command",
-                    "/dingo_controller/RL_theta2/command",
-                    "/dingo_controller/RL_theta3/command"]
+            # self.sim_command_topics = ["/dingo_controller/FR_theta1/command",
+            #         "/dingo_controller/FR_theta2/command",
+            #         "/dingo_controller/FR_theta3/command",
+            #         "/dingo_controller/FL_theta1/command",
+            #         "/dingo_controller/FL_theta2/command",
+            #         "/dingo_controller/FL_theta3/command",
+            #         "/dingo_controller/RR_theta1/command",
+            #         "/dingo_controller/RR_theta2/command",
+            #         "/dingo_controller/RR_theta3/command",
+            #         "/dingo_controller/RL_theta1/command",
+            #         "/dingo_controller/RL_theta2/command",
+            #         "/dingo_controller/RL_theta3/command"]
 
-            self.sim_publisher_array = []
-            for i in range(len(self.sim_command_topics)):
-                # self.sim_publisher_array.append(rospy.Publisher(self.sim_command_topics[i], Float64, queue_size = 0))
-                self.sim_publisher_array.append(self.create_publisher(Float64, self.sim_command_topics[i], 0))
+            # self.sim_publisher_array = []
+            # for i in range(len(self.sim_command_topics)):
+            #     # self.sim_publisher_array.append(rospy.Publisher(self.sim_command_topics[i], Float64, queue_size = 0))
+            #     self.sim_publisher_array.append(self.create_publisher(Float64, self.sim_command_topics[i], 0))
+            self.sim_command_topic = "/dingo_controller/commands"
+            self.sim_publisher = self.create_publisher(Float64MultiArray, self.sim_command_topic, 10)
 
         # Create config
         self.config = Configuration()
@@ -310,23 +313,40 @@ class MagbotDriver(Node):
             self.get_logger().error("ERROR: Robot currently estopped. Please release before trying to send commands")
 
     def run_joint_space_command(self, msg):
-        if self.external_commands_enabled == 1 and self.currently_estopped == 0:
+        # if self.external_commands_enabled == 1 and self.currently_estopped == 0:
+        #     joint_angles = np.zeros((3,4))
+        #     j = 0
+        #     for i in 3:
+        #         joint_angles[i] = [msg.FR_foot[j], msg.FL_foot[j], msg.RR_foot[j], msg.RL_foot[j]]
+        #         j = j+1
+        #     print(joint_angles)
+
+        #     if self.is_sim:
+        #         self.publish_joints_to_sim(self, joint_angles)
+            
+        #     if self.is_physical:
+        #         self.hardware_interface.set_actuator_postions(joint_angles)
+            
+        # elif self.external_commands_enabled == 0:
+        #     self.get_logger().info("ERROR: Robot not accepting commands. Please deactivate manual control before sending control commands")
+        # elif self.currently_estopped == 1:
+        #     self.get_logger().info("ERROR: Robot currently estopped. Please release before trying to send commands")
+        if self.external_commands_enabled == 1 and self.state.currently_estopped == 0:
             joint_angles = np.zeros((3,4))
             j = 0
-            for i in 3:
+            for i in range(3):
                 joint_angles[i] = [msg.FR_foot[j], msg.FL_foot[j], msg.RR_foot[j], msg.RL_foot[j]]
-                j = j+1
+                j = j + 1
             print(joint_angles)
 
             if self.is_sim:
-                self.publish_joints_to_sim(self, joint_angles)
-            
+                self.publish_joints_to_sim(joint_angles)
             if self.is_physical:
                 self.hardware_interface.set_actuator_postions(joint_angles)
-            
+
         elif self.external_commands_enabled == 0:
             self.get_logger().info("ERROR: Robot not accepting commands. Please deactivate manual control before sending control commands")
-        elif self.currently_estopped == 1:
+        elif self.state.currently_estopped == 1:
             self.get_logger().info("ERROR: Robot currently estopped. Please release before trying to send commands")
     
     # def publish_joints_to_sim(self, joint_angles):
@@ -337,14 +357,22 @@ class MagbotDriver(Node):
     #             self.sim_publisher_array[i].publish(joint_angles[row,col])
     #             i = i + 1
     def publish_joints_to_sim(self, joint_angles):
-        rows, cols = joint_angles.shape
-        i = 0
-        for col in range(cols):
-            for row in range(rows):
-                msg = Float64()
-                msg.data = float(joint_angles[row, col])
-                self.sim_publisher_array[i].publish(msg)
-                i = i + 1
+        # rows, cols = joint_angles.shape
+        # i = 0
+        # for col in range(cols):
+        #     for row in range(rows):
+        #         msg = Float64()
+        #         msg.data = float(joint_angles[row, col])
+        #         self.sim_publisher_array[i].publish(msg)
+        #         i = i + 1
+        joint_angle_list = joint_angles.flatten().tolist()
+
+        # Create Float64MultiArray message
+        msg = Float64MultiArray()
+        msg.data = joint_angle_list
+
+        # Publish to the command topic
+        self.sim_publisher.publish(msg)
 
 
 
