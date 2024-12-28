@@ -55,8 +55,8 @@ class MagbotDriver(Node):
         self.is_sim = True
         # self.is_physical = is_physical
         self.is_physical = False
-        # self.use_imu = use_imu
-        self.use_imu = False
+        self.use_imu = use_imu
+        # self.use_imu = False
 
         self.timer_callback_group = MutuallyExclusiveCallbackGroup()
 
