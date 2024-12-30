@@ -1,23 +1,31 @@
-
 <robot name="dingo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Maximum torque -->
   <xacro:include filename="$(find magbot_gazebo)/description/urdf/dingo_ros2_control.xacro" />
   <!-- Maximum torque -->
   <xacro:property name="effort_limit" value="10" />
 
-  <!-- The root link can't have inertia so did this -->
-  <!-- <link name="root_dummy_link" />
-
-  <joint name="root_joint" type="fixed">
-    <parent link="root_dummy_link"/>
-    <child link="base_link"/>
-  </joint> -->
-  <!-- The root link can't have inertia so did this -->
-
   <!-- base_link -->
   <link
     name="base_link">
-  
+
     <!-- <inertial>
+      <origin xyz="0.0 0.0 0.0"/>
+      <mass value="2.50000000"/>
+      <inertia ixx="0.00664756" ixy="0.00002187" ixz="0.00015428" iyy="0.02996945" iyz="-0.00000064"
+    izz="0.03274274"/>
+    </inertial>-->
+
+    <!--
+    <inertial>
+      <origin xyz="0.0 0.00126483 -0.00622132"/>
+      <mass value="2.5000000"/>
+      <inertia ixx="0.00664756" ixy="0.00002187" ixz="0.00015428" iyy="0.02996945" iyz="-0.00000064"
+    izz="0.03274274"/>
+    </inertial>
+    -->
+
+    <inertial>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -30,15 +38,16 @@
         iyy="0.00029699"
         iyz="3.2027E-08"
         izz="0.00063853" />
-    </inertial> -->
-    
-    
+    </inertial>
+
+    <!-- 
     <inertial>
       <origin xyz="-0.02679290 -0.00012097 0.00457177"/>
       <mass value="5.0000000"/>
-      <inertia ixx="0.00732760" ixy="-0.00000000" ixz="0.00021940" iyy="0.02995798" iyz="-0.00000002" izz="0.03298004"/>
+      <inertia ixx="0.00732760" ixy="-0.00000000" ixz="0.00021940" iyy="0.02995798" iyz="-0.00000002"
+    izz="0.03298004"/>
     </inertial>
-   
+    -->
     <visual>
       <origin
         xyz="0 0 0"
@@ -47,10 +56,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/base_link.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -67,9 +77,10 @@
   <link
     name="FL_link1">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.30000000"/>
-      <inertia ixx="0.00019300" ixy="0.00000000" ixz="0.00000000" iyy="0.00014890" iyz="0.00000000" izz="0.00012410"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.30000000" />
+      <inertia ixx="0.00019300" ixy="0.00000000" ixz="0.00000000" iyy="0.00014890" iyz="0.00000000"
+        izz="0.00012410" />
     </inertial>
     <visual>
       <origin
@@ -79,10 +90,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/FL_link1.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -99,9 +111,10 @@
   <link
     name="FL_link2">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.10000000"/>
-      <inertia ixx="0.00000700" ixy="0.00000000" ixz="0.00000444" iyy="0.00017260" iyz="0.00000000" izz="0.00017568"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.10000000" />
+      <inertia ixx="0.00000700" ixy="0.00000000" ixz="0.00000444" iyy="0.00017260" iyz="0.00000000"
+        izz="0.00017568" />
     </inertial>
 
     <visual>
@@ -112,10 +125,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/L_link2.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -132,9 +146,10 @@
   <link
     name="FL_link3">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.10000000"/>
-      <inertia ixx="0.00000936" ixy="-0.00001360" ixz="-0.00000319" iyy="0.00019747" iyz="-0.00000027" izz="0.00019702"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.10000000" />
+      <inertia ixx="0.00000936" ixy="-0.00001360" ixz="-0.00000319" iyy="0.00019747"
+        iyz="-0.00000027" izz="0.00019702" />
     </inertial>
 
     <visual>
@@ -145,10 +160,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/L_link3.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -165,9 +181,10 @@
   <link
     name="FL_link4">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.02000000"/>
-      <inertia ixx="0.00000060" ixy="-0.00000013" ixz="0.00000000" iyy="0.00000058" iyz="0.00000000" izz="0.00000045"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.02000000" />
+      <inertia ixx="0.00000060" ixy="-0.00000013" ixz="0.00000000" iyy="0.00000058" iyz="0.00000000"
+        izz="0.00000045" />
     </inertial>
 
     <visual>
@@ -178,10 +195,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/link4.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -198,9 +216,10 @@
   <link
     name="FR_link1">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.30000000"/>
-      <inertia ixx="0.00019300" ixy="0.00000000" ixz="0.00000000" iyy="0.00014890" iyz="0.00000000" izz="0.00012410"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.30000000" />
+      <inertia ixx="0.00019300" ixy="0.00000000" ixz="0.00000000" iyy="0.00014890" iyz="0.00000000"
+        izz="0.00012410" />
     </inertial>
 
     <visual>
@@ -211,10 +230,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/FR_link1.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -231,9 +251,10 @@
   <link
     name="FR_link2">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.10000000"/>
-      <inertia ixx="0.00000700" ixy="0.00000000" ixz="0.00000444" iyy="0.00017260" iyz="0.00000000" izz="0.00017568"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.10000000" />
+      <inertia ixx="0.00000700" ixy="0.00000000" ixz="0.00000444" iyy="0.00017260" iyz="0.00000000"
+        izz="0.00017568" />
     </inertial>
 
     <visual>
@@ -244,10 +265,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/R_link2.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -264,9 +286,10 @@
   <link
     name="FR_link3">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.10000000"/>
-      <inertia ixx="0.00000936" ixy="-0.00001360" ixz="-0.00000319" iyy="0.00019747" iyz="-0.00000027" izz="0.00019702"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.10000000" />
+      <inertia ixx="0.00000936" ixy="-0.00001360" ixz="-0.00000319" iyy="0.00019747"
+        iyz="-0.00000027" izz="0.00019702" />
     </inertial>
 
     <visual>
@@ -277,10 +300,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/R_link3.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -297,9 +321,10 @@
   <link
     name="FR_link4">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.02000000"/>
-      <inertia ixx="0.00000060" ixy="-0.00000013" ixz="0.00000000" iyy="0.00000058" iyz="0.00000000" izz="0.00000045"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.02000000" />
+      <inertia ixx="0.00000060" ixy="-0.00000013" ixz="0.00000000" iyy="0.00000058" iyz="0.00000000"
+        izz="0.00000045" />
     </inertial>
 
     <visual>
@@ -310,10 +335,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/link4.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -330,9 +356,10 @@
   <link
     name="RL_link1">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.30000000"/>
-      <inertia ixx="0.00019300" ixy="0.00000000" ixz="0.00000000" iyy="0.00014890" iyz="0.00000000" izz="0.00012410"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.30000000" />
+      <inertia ixx="0.00019300" ixy="0.00000000" ixz="0.00000000" iyy="0.00014890" iyz="0.00000000"
+        izz="0.00012410" />
     </inertial>
 
     <visual>
@@ -343,10 +370,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/RL_link1.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -358,14 +386,15 @@
       </geometry>
     </collision>
   </link>
-  
+
   <!-- RL_link2 -->
   <link
     name="RL_link2">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.10000000"/>
-      <inertia ixx="0.00000700" ixy="0.00000000" ixz="0.00000444" iyy="0.00017260" iyz="0.00000000" izz="0.00017568"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.10000000" />
+      <inertia ixx="0.00000700" ixy="0.00000000" ixz="0.00000444" iyy="0.00017260" iyz="0.00000000"
+        izz="0.00017568" />
     </inertial>
 
     <visual>
@@ -376,10 +405,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/L_link2.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -396,9 +426,10 @@
   <link
     name="RL_link3">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.10000000"/>
-      <inertia ixx="0.00000936" ixy="-0.00001360" ixz="-0.00000319" iyy="0.00019747" iyz="-0.00000027" izz="0.00019702"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.10000000" />
+      <inertia ixx="0.00000936" ixy="-0.00001360" ixz="-0.00000319" iyy="0.00019747"
+        iyz="-0.00000027" izz="0.00019702" />
     </inertial>
 
     <visual>
@@ -409,10 +440,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/L_link3.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -429,9 +461,10 @@
   <link
     name="RL_link4">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.02000000"/>
-      <inertia ixx="0.00000060" ixy="-0.00000013" ixz="0.00000000" iyy="0.00000058" iyz="0.00000000" izz="0.00000045"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.02000000" />
+      <inertia ixx="0.00000060" ixy="-0.00000013" ixz="0.00000000" iyy="0.00000058" iyz="0.00000000"
+        izz="0.00000045" />
     </inertial>
 
     <visual>
@@ -442,10 +475,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/link4.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -462,9 +496,10 @@
   <link
     name="RR_link1">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.30000000"/>
-      <inertia ixx="0.00019300" ixy="0.00000000" ixz="0.00000000" iyy="0.00014890" iyz="0.00000000" izz="0.00012410"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.30000000" />
+      <inertia ixx="0.00019300" ixy="0.00000000" ixz="0.00000000" iyy="0.00014890" iyz="0.00000000"
+        izz="0.00012410" />
     </inertial>
 
     <visual>
@@ -475,10 +510,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/RR_link1.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -495,9 +531,10 @@
   <link
     name="RR_link2">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.10000000"/>
-      <inertia ixx="0.00000700" ixy="0.00000000" ixz="0.00000444" iyy="0.00017260" iyz="0.00000000" izz="0.00017568"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.10000000" />
+      <inertia ixx="0.00000700" ixy="0.00000000" ixz="0.00000444" iyy="0.00017260" iyz="0.00000000"
+        izz="0.00017568" />
     </inertial>
 
     <visual>
@@ -508,10 +545,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/R_link2.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -528,9 +566,10 @@
   <link
     name="RR_link3">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.10000000"/>
-      <inertia ixx="0.00000936" ixy="-0.00001360" ixz="-0.00000319" iyy="0.00019747" iyz="-0.00000027" izz="0.00019702"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.10000000" />
+      <inertia ixx="0.00000936" ixy="-0.00001360" ixz="-0.00000319" iyy="0.00019747"
+        iyz="-0.00000027" izz="0.00019702" />
     </inertial>
 
     <visual>
@@ -541,10 +580,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/R_link3.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -561,9 +601,10 @@
   <link
     name="RR_link4">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.02000000"/>
-      <inertia ixx="0.00000060" ixy="-0.00000013" ixz="0.00000000" iyy="0.00000058" iyz="0.00000000" izz="0.00000045"/>
+      <origin xyz="0 0 0" />
+      <mass value="0.02000000" />
+      <inertia ixx="0.00000060" ixy="-0.00000013" ixz="0.00000000" iyy="0.00000058" iyz="0.00000000"
+        izz="0.00000045" />
     </inertial>
 
     <visual>
@@ -574,10 +615,11 @@
         <mesh
           filename="package://magbot_gazebo/description/meshes/link4.dae" />
       </geometry>
-      <material name="">
-        <color rgba="0.15294 0.78431 0.96078 1" />
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
-
     </visual>
     <collision>
       <origin
@@ -591,9 +633,8 @@
   </link>
 
 
-
   <!-- JOINTS -->
-  
+
   <joint
     name="FL_theta1"
     type="revolute">
@@ -611,8 +652,7 @@
       upper="0.785398"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FL_theta2"
@@ -631,8 +671,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FL_theta3"
@@ -651,8 +690,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FL_foot"
@@ -667,7 +705,6 @@
     <axis
       xyz="0 0 0" />
   </joint>
-
 
 
   <joint
@@ -687,8 +724,7 @@
       upper="0.785398"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FR_theta2"
@@ -707,8 +743,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FR_theta3"
@@ -727,8 +762,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FR_foot"
@@ -743,8 +777,6 @@
     <axis
       xyz="0 0 0" />
   </joint>
-
-
 
 
   <joint
@@ -764,8 +796,7 @@
       upper="0.785398"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RL_theta2"
@@ -784,8 +815,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RL_theta3"
@@ -804,8 +834,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RL_foot"
@@ -820,7 +849,6 @@
     <axis
       xyz="0 0 0" />
   </joint>
-
 
 
   <joint
@@ -840,8 +868,7 @@
       upper="0.785398"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RR_theta2"
@@ -860,8 +887,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RR_theta3"
@@ -880,8 +906,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <dynamics damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RR_foot"
@@ -898,18 +923,19 @@
   </joint>
 
 
-
+  <!-- ROS control plugin -->
   <gazebo>
     <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
       <parameters>$(find magbot_gazebo)/config/dingo_controllers.yaml</parameters>
-       <!-- <ros>
+      <!-- <ros>
        <namespace>/dingo_controller</namespace>
      </ros> -->
     </plugin>
   </gazebo>
 
 
-  <gazebo reference="base_link">
+  <!-- IMU sensor -->
+  <!-- <gazebo reference="base_link">
     <gravity>true</gravity>
     <sensor name="imu_sensor" type="imu">
       <always_on>true</always_on>
@@ -921,14 +947,14 @@
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.01</stddev> <!-- Adjust stddev as needed -->
+            <stddev>0.01</stddev> 
           </noise>
         </angular_velocity>
         <linear_acceleration>
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.1</stddev> <!-- Adjust stddev as needed -->
+            <stddev>0.1</stddev> 
           </noise>
         </linear_acceleration>
       </imu>
@@ -946,8 +972,9 @@
         <frameName>base_link</frameName>
       </plugin>
     </sensor>
-  </gazebo>
+  </gazebo> -->
 
+  <!-- Joint state publisher plugin -->
   <gazebo>
     <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
       <ros>
@@ -970,7 +997,6 @@
     </plugin>
   </gazebo>
 
-
   <!-- FR4 friction -->
   <gazebo reference="FR_link4">
     <mu1>1.0</mu1>
@@ -980,6 +1006,7 @@
     <kd>100.0</kd>                <!-- Removed value attribute for ROS2 syntax -->
   </gazebo>
 
+  <!-- FL4 friction -->
   <gazebo reference="FL_link4">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
@@ -988,6 +1015,7 @@
     <kd>100.0</kd>
   </gazebo>
 
+  <!-- RR4 friction -->
   <gazebo reference="RR_link4">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
@@ -996,6 +1024,7 @@
     <kd>100.0</kd>
   </gazebo>
 
+  <!-- RL4 friction -->
   <gazebo reference="RL_link4">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
@@ -1003,38 +1032,6 @@
     <kp>1000000.0</kp>
     <kd>100.0</kd>
   </gazebo>
-
-  <!-- <gazebo reference="FR_link4">
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-    <minDepth>0.0002</minDepth>
-    <kp  value="1000000.0"/>
-    <kd  value="100.0"/>
-  </gazebo>
-
-  <gazebo reference="FL_link4">
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-    <minDepth>0.0002</minDepth>
-    <kp  value="1000000.0"/>
-    <kd  value="100.0"/>
-  </gazebo>
-
-  <gazebo reference="RR_link4">
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-    <minDepth>0.0002</minDepth>
-    <kp  value="1000000.0"/>
-    <kd  value="100.0"/>
-  </gazebo>
-
-  <gazebo reference="RL_link4">
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-    <minDepth>0.0002</minDepth>
-    <kp  value="1000000.0"/>
-    <kd  value="100.0"/>
-  </gazebo> -->
 
   <xacro:dingo_ros2_control name="DingoRobotSystem" />
 

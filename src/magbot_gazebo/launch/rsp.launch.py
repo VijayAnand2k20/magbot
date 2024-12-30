@@ -382,25 +382,25 @@ def generate_launch_description():
     ]), value_type=str)
 
     # Gazebo launch file
-    gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py')
-        ),
-        # launch_arguments={'world': world_file, 'use_sim_time': use_sim_time}.items()
-    )
     # gazebo = IncludeLaunchDescription(
     #     PythonLaunchDescriptionSource(
     #         os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py')
     #     ),
-    #     launch_arguments={'verbose': 'true'}.items()
+    #     # launch_arguments={'world': world_file, 'use_sim_time': use_sim_time}.items()
     # )
+    gazebo = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py')
+        ),
+        launch_arguments={'verbose': 'true'}.items()
+    )
     
     # Node to spawn the robot in Gazebo
     spawn_robot = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
         # namespace='dingo_controller',
-        arguments=['-topic', 'robot_description', '-entity', 'magbot', '-z', '3'],
+        arguments=['-topic', 'robot_description', '-entity', 'magbot', '-z', '0.2'],
         output='screen'
     )
     # spawn_robot = ExecuteProcess(
