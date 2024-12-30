@@ -218,7 +218,7 @@ controller_manager:
 
     # Define dingo_controller as a JointGroupPositionController
     dingo_controller:
-      type: position_controllers/JointGroupPositionController
+      type: effort_controllers/JointGroupEffortController
 
 dingo_controller:
   ros__parameters:
@@ -235,7 +235,7 @@ dingo_controller:
       - RL_theta1
       - RL_theta2
       - RL_theta3
-    interface_name: position
+    interface_name: effort
 
 # controller_manager:
 #   ros__parameters:
