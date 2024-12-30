@@ -1,3 +1,4 @@
+
 <robot name="dingo" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!-- Maximum torque -->
@@ -652,7 +653,7 @@
       upper="0.785398"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FL_theta2"
@@ -671,7 +672,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FL_theta3"
@@ -690,7 +691,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FL_foot"
@@ -724,7 +725,7 @@
       upper="0.785398"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FR_theta2"
@@ -743,7 +744,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FR_theta3"
@@ -762,7 +763,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="FR_foot"
@@ -796,7 +797,7 @@
       upper="0.785398"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RL_theta2"
@@ -815,7 +816,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RL_theta3"
@@ -834,7 +835,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RL_foot"
@@ -868,7 +869,7 @@
       upper="0.785398"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RR_theta2"
@@ -887,7 +888,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RR_theta3"
@@ -906,7 +907,7 @@
       upper="3"
       effort="${effort_limit}"
       velocity="3" />
-    <dynamics damping="1000.0" friction="1000.0" />
+    <joint_properties damping="1000.0" friction="1000.0" />
   </joint>
   <joint
     name="RR_foot"
@@ -927,7 +928,7 @@
   <gazebo>
     <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
       <parameters>$(find magbot_gazebo)/config/dingo_controllers.yaml</parameters>
-      <!-- <ros>
+       <!-- <ros>
        <namespace>/dingo_controller</namespace>
      </ros> -->
     </plugin>
@@ -935,7 +936,7 @@
 
 
   <!-- IMU sensor -->
-  <!-- <gazebo reference="base_link">
+  <gazebo reference="base_link">
     <gravity>true</gravity>
     <sensor name="imu_sensor" type="imu">
       <always_on>true</always_on>
@@ -947,14 +948,14 @@
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.01</stddev> 
+            <stddev>0.01</stddev> <!-- Adjust stddev as needed -->
           </noise>
         </angular_velocity>
         <linear_acceleration>
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.1</stddev> 
+            <stddev>0.1</stddev> <!-- Adjust stddev as needed -->
           </noise>
         </linear_acceleration>
       </imu>
@@ -972,7 +973,7 @@
         <frameName>base_link</frameName>
       </plugin>
     </sensor>
-  </gazebo> -->
+  </gazebo>
 
   <!-- Joint state publisher plugin -->
   <gazebo>

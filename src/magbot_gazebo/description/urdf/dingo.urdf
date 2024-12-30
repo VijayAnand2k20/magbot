@@ -424,7 +424,7 @@
     <child link="FL_link1"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" lower="-0.785398" upper="0.785398" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="FL_theta2" type="revolute">
     <origin rpy="1.57079634307336 1.57079568414183 -1.57079631051644" xyz="0.0496000007984339 0.014400000013256 0"/>
@@ -432,7 +432,7 @@
     <child link="FL_link2"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" lower="-3" upper="3" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="FL_theta3" type="revolute">
     <origin rpy="0 0 1.57079594774422" xyz="0.129999999999897 0 0"/>
@@ -440,7 +440,7 @@
     <child link="FL_link3"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" lower="-3" upper="3" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="FL_foot" type="fixed">
     <origin rpy="0 0 0" xyz="0.138136646352288 0 0"/>
@@ -454,7 +454,7 @@
     <child link="FR_link1"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10" lower="-0.785398" upper="0.785398" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="FR_theta2" type="revolute">
     <origin rpy="1.57079632309575 1.57079572077363 -1.57079633049404" xyz="-0.0495999992169121 0.0144000000000242 0"/>
@@ -462,7 +462,7 @@
     <child link="FR_link2"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" lower="-3" upper="3" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="FR_theta3" type="revolute">
     <origin rpy="0 0 1.57079598438978" xyz="0.13000000353672 0 0"/>
@@ -470,7 +470,7 @@
     <child link="FR_link3"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" lower="-3" upper="3" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="FR_foot" type="fixed">
     <origin rpy="0 0 0" xyz="0.13813664635243 0 0"/>
@@ -484,7 +484,7 @@
     <child link="RL_link1"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" lower="-0.785398" upper="0.785398" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="RL_theta2" type="revolute">
     <origin rpy="1.5707963301177 1.57079568414183 -1.57079632347209" xyz="0.0496000007984574 0.014399999996394 0"/>
@@ -492,7 +492,7 @@
     <child link="RL_link2"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" lower="-3" upper="3" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="RL_theta3" type="revolute">
     <origin rpy="0 0 1.57079594787326" xyz="0.129999999994849 0 0"/>
@@ -500,7 +500,7 @@
     <child link="RL_link3"/>
     <axis xyz="0 0 0.999999999999979"/>
     <limit effort="10" lower="-3" upper="3" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="RL_foot" type="fixed">
     <origin rpy="0 0 0" xyz="0.138136646352323 0 0"/>
@@ -514,7 +514,7 @@
     <child link="RR_link1"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10" lower="-0.785398" upper="0.785398" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="RR_theta2" type="revolute">
     <origin rpy="1.57079631992506 1.57079572077363 -1.57079633366473" xyz="-0.0495999992169147 0.0144000000000178 0"/>
@@ -522,7 +522,7 @@
     <child link="RR_link2"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" lower="-3" upper="3" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="RR_theta3" type="revolute">
     <origin rpy="0 0 1.57079598438978" xyz="0.13000000353672 0 0"/>
@@ -530,7 +530,7 @@
     <child link="RR_link3"/>
     <axis xyz="0 0 0.999999999999998"/>
     <limit effort="10" lower="-3" upper="3" velocity="3"/>
-    <dynamics damping="1000.0" friction="1000.0"/>
+    <joint_properties damping="1000.0" friction="1000.0"/>
   </joint>
   <joint name="RR_foot" type="fixed">
     <origin rpy="0 0 0" xyz="0.138136646352431 0 0"/>
@@ -548,7 +548,7 @@
     </plugin>
   </gazebo>
   <!-- IMU sensor -->
-  <!-- <gazebo reference="base_link">
+  <gazebo reference="base_link">
     <gravity>true</gravity>
     <sensor name="imu_sensor" type="imu">
       <always_on>true</always_on>
@@ -560,14 +560,16 @@
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.01</stddev> 
+            <stddev>0.01</stddev>
+            <!-- Adjust stddev as needed -->
           </noise>
         </angular_velocity>
         <linear_acceleration>
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.1</stddev> 
+            <stddev>0.1</stddev>
+            <!-- Adjust stddev as needed -->
           </noise>
         </linear_acceleration>
       </imu>
@@ -585,7 +587,7 @@
         <frameName>base_link</frameName>
       </plugin>
     </sensor>
-  </gazebo> -->
+  </gazebo>
   <!-- Joint state publisher plugin -->
   <gazebo>
     <plugin filename="libgazebo_ros_joint_state_publisher.so" name="joint_state_publisher">
@@ -649,21 +651,21 @@
     </hardware>
     <!-- FL Joint Group -->
     <joint name="FL_theta1">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
       <!-- <param name="initial_position">0.0</param> -->
     </joint>
     <joint name="FL_theta2">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
       <!-- <param name="initial_position">0.0</param> -->
     </joint>
     <joint name="FL_theta3">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
@@ -671,21 +673,21 @@
     </joint>
     <!-- FR Joint Group -->
     <joint name="FR_theta1">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
       <!-- <param name="initial_position">0.0</param> -->
     </joint>
     <joint name="FR_theta2">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
       <!-- <param name="initial_position">0.0</param> -->
     </joint>
     <joint name="FR_theta3">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
@@ -693,21 +695,21 @@
     </joint>
     <!-- RR Joint Group -->
     <joint name="RR_theta1">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
       <!-- <param name="initial_position">0.0</param> -->
     </joint>
     <joint name="RR_theta2">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
       <!-- <param name="initial_position">0.0</param> -->
     </joint>
     <joint name="RR_theta3">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
@@ -715,134 +717,25 @@
     </joint>
     <!-- RL Joint Group -->
     <joint name="RL_theta1">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
       <!-- <param name="initial_position">0.0</param> -->
     </joint>
     <joint name="RL_theta2">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
       <!-- <param name="initial_position">0.0</param> -->
     </joint>
     <joint name="RL_theta3">
-      <command_interface name="effort"/>
+      <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
       <!-- <param name="initial_position">0.0</param> -->
     </joint>
-    <!-- Transmissions -->
-    <transmission name="tran1">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor1" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="FR_theta1" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran2">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor2" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="FR_theta2" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran3">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor3" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="FR_theta3" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran4">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor4" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="FL_theta1" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran5">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor5" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="FL_theta2" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran6">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor6" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="FL_theta3" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran7">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor7" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="RR_theta1" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran8">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor8" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="RR_theta2" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran9">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor9" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="RR_theta3" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran10">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor10" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="RL_theta1" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran11">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor11" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="RL_theta2" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
-    <transmission name="tran12">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="motor12" role="actuator1">
-        <mechanical_reduction>5</mechanical_reduction>
-      </actuator>
-      <joint name="RL_theta3" role="joint1">
-        <offset>0.0</offset>
-      </joint>
-    </transmission>
   </ros2_control>
 </robot>

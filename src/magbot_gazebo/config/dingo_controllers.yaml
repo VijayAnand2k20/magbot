@@ -214,7 +214,7 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
       parameters:
-        state_publish_rate: 50
+        state_publish_rate: 1000
 
     # Define dingo_controller as a JointGroupPositionController
     dingo_controller:
@@ -235,6 +235,7 @@ dingo_controller:
       - RL_theta1
       - RL_theta2
       - RL_theta3
+    interface_name: position
 
 # controller_manager:
 #   ros__parameters:

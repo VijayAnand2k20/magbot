@@ -13,7 +13,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <joint name="FL_theta2">
@@ -21,7 +21,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <joint name="FL_theta3">
@@ -29,7 +29,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <!-- FR Joint Group -->
@@ -38,7 +38,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <joint name="FR_theta2">
@@ -46,7 +46,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <joint name="FR_theta3">
@@ -54,7 +54,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <!-- RR Joint Group -->
@@ -63,7 +63,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <joint name="RR_theta2">
@@ -71,7 +71,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <joint name="RR_theta3">
@@ -79,7 +79,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <!-- RL Joint Group -->
@@ -88,7 +88,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <joint name="RL_theta2">
@@ -96,7 +96,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
 
       <joint name="RL_theta3">
@@ -104,129 +104,8 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
-        <param name="initial_position">0.0</param>
+        <!-- <param name="initial_position">0.0</param> -->
       </joint>
-
-      <!-- Transmissions -->
-      <transmission name="tran1">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor1" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="FR_theta1" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran2">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor2" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="FR_theta2" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran3">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor3" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="FR_theta3" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran4">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor4" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="FL_theta1" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran5">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor5" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="FL_theta2" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran6">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor6" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="FL_theta3" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran7">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor7" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="RR_theta1" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran8">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor8" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="RR_theta2" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran9">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor9" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="RR_theta3" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran10">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor10" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="RL_theta1" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran11">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor11" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="RL_theta2" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
-
-      <transmission name="tran12">
-        <plugin>transmission_interface/SimpleTransmission</plugin>
-        <actuator name="motor12" role="actuator1">
-          <mechanical_reduction>5</mechanical_reduction>
-        </actuator>
-        <joint name="RL_theta3" role="joint1">
-          <offset>0.0</offset>
-        </joint>
-      </transmission>
 
     </ros2_control>
   </xacro:macro>
