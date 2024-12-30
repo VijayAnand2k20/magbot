@@ -409,14 +409,6 @@ def generate_launch_description():
         arguments=['dingo_controller', '--controller-manager', '/controller_manager'],
         output='screen'
     )
-    load_controllers = ExecuteProcess(
-        cmd=[
-            'ros2', 'control', 'load_start_controller', 
-            '--all', 
-            '--set-state', 'active', 
-        ],
-        output='screen'
-    )
 
     robot_state_publisher = Node(
         package='robot_state_publisher',
