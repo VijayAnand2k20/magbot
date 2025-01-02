@@ -3,7 +3,7 @@
     <link name='base_link'>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
-        <mass>0.81776</mass>
+        <mass>2.2</mass>
         <inertia>
           <ixx>0.00058474</ixx>
           <ixy>-1.0045e-06</ixy>
@@ -21,14 +21,6 @@
             <uri>model://magbot_gazebo/description/meshes/base_collision.STL</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
       <visual name='base_link_visual'>
         <pose>0 0 0 0 -0 0</pose>
@@ -39,42 +31,6 @@
           </mesh>
         </geometry>
       </visual>
-      <gravity>1</gravity>
-      <sensor name='imu_sensor' type='imu'>
-        <always_on>1</always_on>
-        <update_rate>100</update_rate>
-        <visualize>1</visualize>
-        <topic>__default_topic__</topic>
-        <imu>
-          <angular_velocity>
-            <noise>
-              <type>gaussian</type>
-              <mean>0.0</mean>
-              <stddev>0.01</stddev>
-            </noise>
-          </angular_velocity>
-          <linear_acceleration>
-            <noise>
-              <type>gaussian</type>
-              <mean>0.0</mean>
-              <stddev>0.1</stddev>
-            </noise>
-          </linear_acceleration>
-        </imu>
-        <pose>0 0 0 0 -0 0</pose>
-        <plugin name='imu_plugin' filename='libgazebo_ros_imu_sensor.so'>
-          <ros>
-            <namespace>/dingo</namespace>
-            <remapping>~/out:=imu</remapping>
-          </ros>
-          <topicName>imu</topicName>
-          <bodyName>base_link</bodyName>
-          <updateRateHZ>15.0</updateRateHZ>
-          <xyzOffset>0 0 0</xyzOffset>
-          <rpyOffset>0 0 0</rpyOffset>
-          <frameName>base_link</frameName>
-        </plugin>
-      </sensor>
     </link>
     <joint name='FL_theta1' type='revolute'>
       <pose relative_to='base_link'>0.11165 0.061 -0.0144 1.5708 -0 1.5708</pose>
@@ -829,7 +785,7 @@
         <namespace>/dingo_gazebo</namespace>
         <remapping>~/out:=joint_states</remapping>
       </ros>
-      <update_rate>50</update_rate>
+      <update_rate>1000</update_rate>
       <joint_name>FR_theta1</joint_name>
       <joint_name>FR_theta2</joint_name>
       <joint_name>FR_theta3</joint_name>
@@ -843,5 +799,6 @@
       <joint_name>RL_theta2</joint_name>
       <joint_name>RL_theta3</joint_name>
     </plugin>
+    <real_time_update_rate>50</real_time_update_rate>
   </model>
 </sdf>

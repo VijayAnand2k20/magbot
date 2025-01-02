@@ -1,7 +1,6 @@
 
 <robot name="dingo" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- Maximum torque -->
   <xacro:include filename="$(find magbot_gazebo)/description/urdf/dingo_ros2_control.xacro" />
   <!-- Maximum torque -->
   <xacro:property name="effort_limit" value="10" />
@@ -31,7 +30,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <mass
-        value="0.81776" />
+        value="2.2" />
       <inertia
         ixx="0.00058474"
         ixy="-1.0045E-06"
@@ -934,9 +933,14 @@
     </plugin>
   </gazebo>
 
+  <gazebo>
+    <real_time_update_rate>50</real_time_update_rate>
+  </gazebo>
+
+
 
   <!-- IMU sensor -->
-  <gazebo reference="base_link">
+  <!-- <gazebo reference="base_link">
     <gravity>true</gravity>
     <sensor name="imu_sensor" type="imu">
       <always_on>true</always_on>
@@ -948,14 +952,14 @@
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.01</stddev> <!-- Adjust stddev as needed -->
+            <stddev>0.01</stddev>
           </noise>
         </angular_velocity>
         <linear_acceleration>
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.1</stddev> <!-- Adjust stddev as needed -->
+            <stddev>0.1</stddev>
           </noise>
         </linear_acceleration>
       </imu>
@@ -973,7 +977,7 @@
         <frameName>base_link</frameName>
       </plugin>
     </sensor>
-  </gazebo>
+  </gazebo> -->
 
   <!-- Joint state publisher plugin -->
   <gazebo>
@@ -982,7 +986,7 @@
         <namespace>/dingo_gazebo</namespace>
         <remapping>~/out:=joint_states</remapping>
       </ros>
-      <update_rate>50</update_rate>
+      <update_rate>1000</update_rate>
       <joint_name>FR_theta1</joint_name>
       <joint_name>FR_theta2</joint_name>
       <joint_name>FR_theta3</joint_name>
