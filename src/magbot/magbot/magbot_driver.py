@@ -296,7 +296,7 @@ class MagbotDriver(Node):
         if self.external_commands_enabled == 1 and self.currently_estopped == 0:
             foot_locations = np.zeros((3,4))
             j = 0
-            for i in 3:
+            for i in range(3):
                 foot_locations[i] = [msg.FR_foot[j], msg.FL_foot[j], msg.RR_foot[j], msg.RL_foot[j]]
                 j = j+1
             print(foot_locations)
