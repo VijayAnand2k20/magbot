@@ -1,13 +1,18 @@
 controller_manager:
   ros__parameters:
-    update_rate: 1000 
+    update_rate: 1000
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+      parameters:
+        state_publish_rate: 50
 
     dingo_controller:
-      type: position_controllers/JointGroupPositionController
+      type: pid_controller/PidController
 
 dingo_controller:
   ros__parameters:
-    joints:
+    dof_names:
       - FL_theta1
       - FL_theta2
       - FL_theta3
@@ -20,4 +25,107 @@ dingo_controller:
       - RL_theta1
       - RL_theta2
       - RL_theta3
-    interface_name: position
+    command_interface: effort
+
+    reference_and_state_interfaces: ["position"]
+
+    gains:
+      FL_theta1:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+      FL_theta2:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+      FL_theta3:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+
+      FR_theta1:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+      FR_theta2:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+      FR_theta3:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+
+      RR_theta1:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+      RR_theta2:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+      RR_theta3:
+        {
+          p: 9.0,
+          i: 0.00,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+
+      RL_theta1:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+      RL_theta2:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }
+      RL_theta3:
+        {
+          p: 9.0,
+          i: 0.03,
+          d: 0.3055,
+          i_clamp_min: -1000.0,
+          i_clamp_max: 1000.0,
+        }

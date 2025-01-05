@@ -8,7 +8,7 @@ cp model.sdf ~/.gazebo/models/magbot_gazebo/model.sdf
 
 cd /home/jarvis/magic/ROS/magbot_ws/
 
-colcon build --packages-select magbot_gazebo
+colcon build --packages-select magbot_gazebo magbot
 
 source install/setup.bash
 

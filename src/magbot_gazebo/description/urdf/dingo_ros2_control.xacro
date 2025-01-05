@@ -9,66 +9,90 @@
 
       <!-- FL Joint Group -->
       <joint name="FL_theta1">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <joint name="FL_theta2">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <joint name="FL_theta3">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <!-- FR Joint Group -->
       <joint name="FR_theta1">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <joint name="FR_theta2">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <joint name="FR_theta3">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <!-- RR Joint Group -->
       <joint name="RR_theta1">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <joint name="RR_theta2">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <joint name="RR_theta3">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <!-- RL Joint Group -->
       <joint name="RL_theta1">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <joint name="RL_theta2">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
       <joint name="RL_theta3">
-        <command_interface name="position"/>
-        <state_interface name="position"/>
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
       </joint>
 
     </ros2_control>

@@ -36,6 +36,7 @@ from magbot_control.Kinematics import four_legs_inverse_kinematics
 from magbot_control.Config import Configuration
 from interfaces_pkg.msg import TaskSpace, JointSpace, Angle
 from std_msgs.msg import Bool
+from control_msgs.msg import MultiDOFCommand
 
 if is_physical:
     from magbot_servo_interfacing.HardwareInterface import HardwareInterface
@@ -93,8 +94,8 @@ class MagbotDriver(Node):
             # for i in range(len(self.sim_command_topics)):
             #     # self.sim_publisher_array.append(rospy.Publisher(self.sim_command_topics[i], Float64, queue_size = 0))
             #     self.sim_publisher_array.append(self.create_publisher(Float64, self.sim_command_topics[i], 0))
-            self.sim_command_topic = "/dingo_controller/commands"
-            self.sim_publisher = self.create_publisher(Float64MultiArray, self.sim_command_topic, 10)
+            self.sim_command_topic = "/dingo_controller/reference"
+            self.sim_publisher = self.create_publisher(MultiDOFCommand, self.sim_command_topic, 10)
 
         # Create config
         self.config = Configuration()
@@ -368,9 +369,12 @@ class MagbotDriver(Node):
         joint_angle_list = joint_angles.flatten().tolist()
 
         # Create Float64MultiArray message
-        msg = Float64MultiArray()
-        msg.data = joint_angle_list
-
+        # msg = Float64MultiArray()
+        # msg.data = joint_angle_list
+        msg = MultiDOFCommand()
+        msg.dof_names = ['FR_theta1', 'FR_theta2', 'FR_theta3', 'FL_theta1', 'FL_theta2', 'FL_theta3', 'RR_theta1', 'RR_theta2', 'RR_theta3', 'RL_theta1', 'RL_theta2', 'RL_theta3']
+        msg.values = joint_angle_list
+        # msg.values_dot = [0.0] * len(msg.dof_names)  # Velocity references (set to 0)
         # Publish to the command topic
         self.sim_publisher.publish(msg)
 

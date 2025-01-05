@@ -31,24 +31,25 @@ def generate_launch_description():
         package='gazebo_ros',
         executable='spawn_entity.py',
         arguments=['-topic', 'robot_description',
-                   '-entity', 'magbot', '-z', '0.2'],
+                   '-entity', 'magbot', '-z', '3'],
         output='screen'
     )
 
-    # joint_state_broadcaster_spawner = Node(
-    #     package='controller_manager',
-    #     executable='spawner',
-    #     parameters=[
-    #             {"use_sim_time": True}
-    #     ],
-    #     arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager'],
-    #     output='screen'
-    # )
+    joint_state_broadcaster_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        parameters=[
+                {"use_sim_time": True}
+        ],
+        arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager'],
+        output='screen'
+    )
 
     dingo_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        arguments=['dingo_controller', '--controller-manager', '/controller_manager'],
+        arguments=['dingo_controller',
+                   '--controller-manager', '/controller_manager'],
         output='screen'
     )
 
@@ -64,10 +65,11 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        DeclareLaunchArgument('use_sim_time', default_value='true', description='Use sim time'),
+        DeclareLaunchArgument(
+            'use_sim_time', default_value='true', description='Use sim time'),
         robot_state_publisher,
         gazebo,
         spawn_robot,
-        # joint_state_broadcaster_spawner,
+        joint_state_broadcaster_spawner,
         dingo_controller_spawner,
     ])
