@@ -538,12 +538,14 @@
     <child link="RR_link4"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <!-- ROS control plugin -->
+  <!-- ROS2 control plugin -->
   <gazebo>
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
       <parameters>/home/jarvis/magic/ROS/magbot_ws/install/magbot_gazebo/share/magbot_gazebo/config/dingo_controllers.yaml</parameters>
-      <robot_param>robot_description</robot_param>
-      <robot_param_node>robot_state_publisher</robot_param_node>
+      <ros>
+        <namespace>/</namespace>
+        <remapping>~/out:=/magbot/joint_states</remapping>
+      </ros>
     </plugin>
     <physics type="ode">
       <ode>
@@ -657,7 +659,7 @@
       </imu>
       <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
         <ros>
-          <namespace>/dingo</namespace>
+          <namespace>/magbot</namespace>
           <remapping>~/out:=imu</remapping>
         </ros>
         <initial_orientation_as_reference>false</initial_orientation_as_reference>
@@ -666,11 +668,11 @@
     </sensor>
   </gazebo>
   <!-- Joint state publisher plugin -->
-  <!-- <gazebo>
-    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+  <gazebo>
+    <plugin filename="libgazebo_ros_joint_state_publisher.so" name="joint_state_publisher">
       <ros>
-        <namespace>/dingo_gazebo</namespace>
-        <remapping>~/out:=joint_states</remapping>
+        <namespace>/</namespace>
+        <remapping>~/out:=magbot/joint_states</remapping>
       </ros>
       <update_rate>1000</update_rate>
       <joint_name>FR_theta1</joint_name>
@@ -686,7 +688,7 @@
       <joint_name>RL_theta2</joint_name>
       <joint_name>RL_theta3</joint_name>
     </plugin>
-  </gazebo> -->
+  </gazebo>
   <!-- FR4 friction -->
   <gazebo reference="FR_link4">
     <mu1>1.0</mu1>

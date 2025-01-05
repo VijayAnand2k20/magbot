@@ -38,6 +38,7 @@ def generate_launch_description():
     joint_state_broadcaster_spawner = Node(
         package='controller_manager',
         executable='spawner',
+        # namespace='magbot',
         parameters=[
                 {"use_sim_time": True}
         ],
@@ -48,6 +49,7 @@ def generate_launch_description():
     dingo_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
+        # namespace='magbot',
         arguments=['dingo_controller',
                    '--controller-manager', '/controller_manager'],
         output='screen'
@@ -56,12 +58,13 @@ def generate_launch_description():
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
+        # namespace='magbot',
         name='robot_state_publisher',
         output='screen',
         parameters=[{'publish_frequency': 10.0,
                      'robot_description': robot_description,
                      'use_sim_time': use_sim_time}],
-        remappings=[('/joint_states', '/dingo_gazebo/joint_states')]
+        remappings=[('/joint_states', '/magbot/joint_states')]
     )
 
     return LaunchDescription([
