@@ -366,18 +366,33 @@ class MagbotDriver(Node):
         #         msg.data = float(joint_angles[row, col])
         #         self.sim_publisher_array[i].publish(msg)
         #         i = i + 1
-        joint_angle_list = joint_angles.flatten().tolist()
+        joint_angle_list = [
+            joint_angles[0,0], # FR_theta1
+            joint_angles[1,0], # FR_theta2
+            joint_angles[2,0], # FR_theta3
+            joint_angles[0,1], # FL_theta1
+            joint_angles[1,1], # FL_theta2
+            joint_angles[2,1], # FL_theta3
+            joint_angles[0,2], # RR_theta1
+            joint_angles[1,2], # RR_theta2
+            joint_angles[2,2], # RR_theta3
+            joint_angles[0,3], # RL_theta1
+            joint_angles[1,3], # RL_theta2
+            joint_angles[2,3]  # RL_theta3
+        ]
+        # joint_angle_list = joint_angles.flatten().tolist()
 
         # Create Float64MultiArray message
         # msg = Float64MultiArray()
         # msg.data = joint_angle_list
         msg = MultiDOFCommand()
         msg.dof_names = ['FR_theta1', 'FR_theta2', 'FR_theta3', 'FL_theta1', 'FL_theta2', 'FL_theta3', 'RR_theta1', 'RR_theta2', 'RR_theta3', 'RL_theta1', 'RL_theta2', 'RL_theta3']
-        msg.values = joint_angle_list
+        msg.values = [float(val) for val in joint_angle_list]
         # msg.values_dot = [0.0] * len(msg.dof_names)  # Velocity references (set to 0)
         # Publish to the command topic
+        
+        self.get_logger().debug(f"Publishing joint angles: {msg.values}")
         self.sim_publisher.publish(msg)
-
 
 
 def signal_handler(sig, frame):

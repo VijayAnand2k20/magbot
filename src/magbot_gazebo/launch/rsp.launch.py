@@ -64,7 +64,7 @@ def generate_launch_description():
         parameters=[{'publish_frequency': 10.0,
                      'robot_description': robot_description,
                      'use_sim_time': use_sim_time}],
-        remappings=[('/joint_states', '/magbot/joint_states')]
+        # remappings=[('/joint_states', '/magbot/joint_states')]
     )
 
     return LaunchDescription([

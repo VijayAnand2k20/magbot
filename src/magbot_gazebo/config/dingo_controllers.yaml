@@ -13,12 +13,12 @@ controller_manager:
 dingo_controller:
   ros__parameters:
     dof_names:
-      - FL_theta1
-      - FL_theta2
-      - FL_theta3
       - FR_theta1
       - FR_theta2
       - FR_theta3
+      - FL_theta1
+      - FL_theta2
+      - FL_theta3
       - RR_theta1
       - RR_theta2
       - RR_theta3

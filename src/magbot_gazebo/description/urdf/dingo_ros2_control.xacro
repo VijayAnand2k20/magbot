@@ -7,28 +7,6 @@
         <plugin>gazebo_ros2_control/GazeboSystem</plugin>
       </hardware>
 
-      <!-- FL Joint Group -->
-      <joint name="FL_theta1">
-        <command_interface name="effort" />
-        <state_interface name="effort" />
-        <state_interface name="position" />
-        <state_interface name="velocity" />
-      </joint>
-
-      <joint name="FL_theta2">
-        <command_interface name="effort" />
-        <state_interface name="effort" />
-        <state_interface name="position" />
-        <state_interface name="velocity" />
-      </joint>
-
-      <joint name="FL_theta3">
-        <command_interface name="effort" />
-        <state_interface name="effort" />
-        <state_interface name="position" />
-        <state_interface name="velocity" />
-      </joint>
-
       <!-- FR Joint Group -->
       <joint name="FR_theta1">
         <command_interface name="effort" />
@@ -45,6 +23,28 @@
       </joint>
 
       <joint name="FR_theta3">
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+
+      <!-- FL Joint Group -->
+      <joint name="FL_theta1">
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+
+      <joint name="FL_theta2">
+        <command_interface name="effort" />
+        <state_interface name="effort" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+
+      <joint name="FL_theta3">
         <command_interface name="effort" />
         <state_interface name="effort" />
         <state_interface name="position" />
