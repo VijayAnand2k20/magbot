@@ -6,5 +6,7 @@ install/
 log/*
 .vscode/*
 src/.vscode/*
-magbot_env/
-ros1/
+*.pyc
+*.pyo
+*.pyd
+.Docker

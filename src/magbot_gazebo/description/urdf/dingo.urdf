@@ -6,33 +6,11 @@
 <robot name="dingo">
   <!-- base_link -->
   <link name="base_link">
-    <!-- <inertial>
-      <origin xyz="0.0 0.0 0.0"/>
-      <mass value="2.50000000"/>
-      <inertia ixx="0.00664756" ixy="0.00002187" ixz="0.00015428" iyy="0.02996945" iyz="-0.00000064"
-    izz="0.03274274"/>
-    </inertial>-->
-    <!--
-    <inertial>
-      <origin xyz="0.0 0.00126483 -0.00622132"/>
-      <mass value="2.5000000"/>
-      <inertia ixx="0.00664756" ixy="0.00002187" ixz="0.00015428" iyy="0.02996945" iyz="-0.00000064"
-    izz="0.03274274"/>
-    </inertial>
-    -->
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="2.2"/>
       <inertia ixx="0.00058474" ixy="-1.0045E-06" ixz="1.0886E-08" iyy="0.00029699" iyz="3.2027E-08" izz="0.00063853"/>
     </inertial>
-    <!-- 
-    <inertial>
-      <origin xyz="-0.02679290 -0.00012097 0.00457177"/>
-      <mass value="5.0000000"/>
-      <inertia ixx="0.00732760" ixy="-0.00000000" ixz="0.00021940" iyy="0.02995798" iyz="-0.00000002"
-    izz="0.03298004"/>
-    </inertial>
-    -->
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -567,45 +545,6 @@
       <gravity>0 0 -9.81</gravity>
     </physics>
   </gazebo>
-  <!-- IMU sensor -->
-  <!-- <gazebo reference="base_link">
-    <gravity>true</gravity>
-    <sensor name="imu_sensor" type="imu">
-      <always_on>true</always_on>
-      <update_rate>100</update_rate>
-      <visualize>true</visualize>
-      <topic>__default_topic__</topic>
-      <imu>
-        <angular_velocity>
-          <noise>
-            <type>gaussian</type>
-            <mean>0.0</mean>
-            <stddev>0.01</stddev>
-          </noise>
-        </angular_velocity>
-        <linear_acceleration>
-          <noise>
-            <type>gaussian</type>
-            <mean>0.0</mean>
-            <stddev>0.1</stddev>
-          </noise>
-        </linear_acceleration>
-      </imu>
-      <pose>0 0 0 0 0 0</pose>
-      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
-        <ros>
-          <namespace>/dingo</namespace>
-          <remapping>~/out:=imu</remapping>
-        </ros>
-        <topicName>imu</topicName>
-        <bodyName>base_link</bodyName>
-        <updateRateHZ>15.0</updateRateHZ>
-        <xyzOffset>0 0 0</xyzOffset>
-        <rpyOffset>0 0 0</rpyOffset>
-        <frameName>base_link</frameName>
-      </plugin>
-    </sensor>
-  </gazebo> -->
   <gazebo reference="base_link">
     <gravity>true</gravity>
     <sensor name="imu_sensor" type="imu">
@@ -663,28 +602,6 @@
         <frame_name>base_link</frame_name>
       </plugin>
     </sensor>
-  </gazebo>
-  <!-- Joint state publisher plugin -->
-  <gazebo>
-    <plugin filename="libgazebo_ros_joint_state_publisher.so" name="joint_state_publisher">
-      <ros>
-        <namespace>/</namespace>
-        <remapping>~/out:=magbot/joint_states</remapping>
-      </ros>
-      <update_rate>1000</update_rate>
-      <joint_name>FR_theta1</joint_name>
-      <joint_name>FR_theta2</joint_name>
-      <joint_name>FR_theta3</joint_name>
-      <joint_name>FL_theta1</joint_name>
-      <joint_name>FL_theta2</joint_name>
-      <joint_name>FL_theta3</joint_name>
-      <joint_name>RR_theta1</joint_name>
-      <joint_name>RR_theta2</joint_name>
-      <joint_name>RR_theta3</joint_name>
-      <joint_name>RL_theta1</joint_name>
-      <joint_name>RL_theta2</joint_name>
-      <joint_name>RL_theta3</joint_name>
-    </plugin>
   </gazebo>
   <!-- FR4 friction -->
   <gazebo reference="FR_link4">

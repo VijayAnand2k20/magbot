@@ -1,12 +1,9 @@
 import os
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, RegisterEventHandler, ExecuteProcess, TimerAction
-from launch.event_handlers import OnProcessStart
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, Command, FindExecutable
 from launch_ros.actions import Node
-from launch.substitutions import PathJoinSubstitution
-from launch_ros.substitutions import FindPackageShare
 from launch_ros.parameter_descriptions import ParameterValue
 from ament_index_python.packages import get_package_share_directory
 
@@ -38,7 +35,6 @@ def generate_launch_description():
     joint_state_broadcaster_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        # namespace='magbot',
         parameters=[
                 {"use_sim_time": True}
         ],
@@ -49,7 +45,6 @@ def generate_launch_description():
     dingo_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        # namespace='magbot',
         arguments=['dingo_controller',
                    '--controller-manager', '/controller_manager'],
         output='screen'
@@ -58,13 +53,12 @@ def generate_launch_description():
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        # namespace='magbot',
         name='robot_state_publisher',
         output='screen',
         parameters=[{'publish_frequency': 10.0,
                      'robot_description': robot_description,
                      'use_sim_time': use_sim_time}],
-        # remappings=[('/joint_states', '/magbot/joint_states')]
+        remappings=[('/joint_states', '/magbot/joint_states')]
     )
 
     return LaunchDescription([
