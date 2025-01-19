@@ -21,12 +21,12 @@ class IMU(Node):
         self.start_time = time.time()
         
         #! Additional setup for debugging only
-    #     self.pub = self.create_publisher(String, 'imu_data', 10)
-    #     self.create_timer(0.1, self.timer_callback)
+        self.pub = self.create_publisher(String, 'imu_data', 10)
+        self.create_timer(0.1, self.timer_callback)
     
-    # def timer_callback(self):
-    #     euler = self.read_orientation()
-    #     self.get_logger().info("Euler: " + str(euler[0]) + " " + str(euler[1]) + " " + str(euler[2]))
+    def timer_callback(self):
+        euler = self.read_orientation()
+        self.get_logger().info("Euler: " + str(euler[0]) + " " + str(euler[1]) + " " + str(euler[2]))
 
 
     def read_orientation(self):

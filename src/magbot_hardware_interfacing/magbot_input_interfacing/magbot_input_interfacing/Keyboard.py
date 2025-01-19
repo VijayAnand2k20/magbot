@@ -387,7 +387,8 @@ class Keyboard(Node):
         ok=False
         for device in devices:
             self.get_logger().info(f"Found device: {device.name}, {device.path}")
-            if (evdev.ecodes.EV_KEY in device.capabilities()) and ('event0' in device.path):
+            # !!!! Find and choose the proper event number !!!!
+            if (evdev.ecodes.EV_KEY in device.capabilities()) and ('event4' in device.path):
                 # if not ok:
                 #     ok = not ok
                     # continue
@@ -403,12 +404,20 @@ class Keyboard(Node):
             self.get_logger().info(f"    Capabilities: {device.capabilities(verbose=True)}")
 
     async def read_keyboard_events(self):
+        # try:
+        #     while self.running:
+        #         events = await self.event_loop.run_in_executor(None, self.dev.read_one)
+        #         if events:
+        #             event = evdev.categorize(events)
+        #             if event.type == ecodes.EV_KEY:
+        #                 self.process_key_event(event)
         try:
             while self.running:
                 events = await self.event_loop.run_in_executor(None, self.dev.read_one)
                 if events:
-                    event = evdev.categorize(events)
-                    if event.event.type == ecodes.EV_KEY:
+                    # Check the raw event type first
+                    if events.type == ecodes.EV_KEY:  # Now checking the raw 'events'
+                        event = evdev.categorize(events)
                         self.process_key_event(event)
         except OSError as e:
             self.get_logger().error(f"Error reading from device: {e}")
