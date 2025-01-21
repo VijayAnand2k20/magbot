@@ -28,6 +28,11 @@ RUN pip3 install numpy transforms3d evdev
 # Copy source code
 COPY . .
 
+RUN mkdir -p /root/.gazebo/models/magbot_gazebo/description
+COPY src/magbot_gazebo/description/urdf/model* /root/.gazebo/models/magbot_gazebo
+COPY src/magbot_gazebo/description/meshes /root/.gazebo/models/magbot_gazebo/description/meshes
+
+
 # Build ROS2 packages
 RUN source /opt/ros/humble/setup.bash && \
     colcon build --packages-select \
@@ -59,4 +64,4 @@ RUN printf '#!/bin/bash\nsource /opt/ros/humble/setup.bash\nsource /ws/install/s
     chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["ros2", "launch", "magbot", "magbot_service.launch.py"]
+CMD ["ros2", "launch", "magbot", "magbot.launch.py"]
