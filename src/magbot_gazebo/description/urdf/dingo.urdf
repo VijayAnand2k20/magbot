@@ -27,6 +27,76 @@
       </geometry>
     </collision>
   </link>
+  <!--LIDAR-->
+  <link name="lidar_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.1"/>
+      <!-- Adjust mass as needed -->
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+        <!-- Adjust dimensions as needed -->
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+        <!-- Blue color for visualization -->
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+        <!-- Adjust dimensions as needed -->
+      </geometry>
+    </collision>
+  </link>
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <!-- Adjust xyz to place the LiDAR on top of the base_link -->
+  </joint>
+  <gazebo reference="lidar_link">
+    <sensor name="lidar_sensor" type="ray">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-3.14159</min_angle>
+            <!-- -180 degrees -->
+            <max_angle>3.14159</max_angle>
+            <!-- +180 degrees -->
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>10.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin filename="libgazebo_ros_ray_sensor.so" name="gazebo_ros_lidar_controller">
+        <ros>
+          <namespace>/</namespace>
+          <remapping>~/out:=scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>lidar_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
   <!-- FL_link1 -->
   <link name="FL_link1">
     <inertial>

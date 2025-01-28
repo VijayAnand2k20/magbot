@@ -3,17 +3,20 @@ services:
   magbot:
     build: .
     environment:
-      - DISPLAY=${DISPLAY}
+      # - DISPLAY=${DISPLAY}
+      - DISPLAY=$WAYLAND_DISPLAY
       - QT_X11_NO_MITSHM=1
       - ROS_DOMAIN_ID=0
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/root/.Xauthority
       - ./src:/ws/src
+      # - /run/user/$(id -u)/wayland-0:/run/user/$(id -u)/wayland-0
     network_mode: host
     privileged: true  # Required for hardware access and Gazebo
     devices:
       - /dev/input:/dev/input  # For joystick access
+      - /dev/dri:/dev/dri
     command: >
       ros2 launch magbot magbot_service.launch.py
       is_sim:=1
@@ -25,12 +28,17 @@ services:
   gazebo:
     build: .
     environment:
-      - DISPLAY=${DISPLAY}
+      # - DISPLAY=${DISPLAY}
+      - DISPLAY=$WAYLAND_DISPLAY
       - QT_X11_NO_MITSHM=1
       - ROS_DOMAIN_ID=0
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/root/.Xauthority
+      # - /run/user/$(id -u)/wayland-0:/run/user/$(id -u)/wayland-0
+    devices:
+      - /dev/input:/dev/input  # For joystick access
+      - /dev/dri:/dev/dri
     network_mode: host
     privileged: true
     command: ros2 launch magbot_gazebo rsp.launch.py

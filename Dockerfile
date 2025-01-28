@@ -28,7 +28,7 @@ RUN pip3 install numpy transforms3d evdev
 # Copy source code
 COPY . .
 
-RUN mkdir -p /root/.gazebo/models/magbot_gazebo/description
+RUN mkdir -p /root/.gazebo/models/magbot_gazebo/description/meshes
 COPY src/magbot_gazebo/description/urdf/model* /root/.gazebo/models/magbot_gazebo
 COPY src/magbot_gazebo/description/meshes /root/.gazebo/models/magbot_gazebo/description/meshes
 
@@ -50,7 +50,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-colcon-common-extensions \
     build-essential \
     gcc \
-    python3-dev
+    python3-dev \
+    evtest \
+    tmux
 
 # Install Python dependencies
 RUN pip3 install numpy transforms3d evdev
@@ -64,4 +66,4 @@ RUN printf '#!/bin/bash\nsource /opt/ros/humble/setup.bash\nsource /ws/install/s
     chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["ros2", "launch", "magbot", "magbot.launch.py"]
+CMD ["bash"]

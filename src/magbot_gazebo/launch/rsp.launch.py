@@ -14,6 +14,10 @@ def generate_launch_description():
     urdf_file = os.path.join(get_package_share_directory(
         'magbot_gazebo'), 'description', 'urdf', 'dingo.urdf.xacro')
 
+    world_file_name = 'simple.world'
+    world = os.path.join(get_package_share_directory(
+        'magbot_gazebo'), 'description', 'worlds', world_file_name)
+
     robot_description = ParameterValue(Command([
         FindExecutable(name='xacro'), ' ', urdf_file
     ]), value_type=str)
@@ -21,7 +25,10 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py')
         ),
-        launch_arguments={'verbose': 'true'}.items()
+        launch_arguments={
+            'verbose': 'true',
+            'world': world,
+        }.items()
     )
 
     spawn_robot = Node(
@@ -38,7 +45,8 @@ def generate_launch_description():
         parameters=[
                 {"use_sim_time": True}
         ],
-        arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager'],
+        arguments=['joint_state_broadcaster',
+                   '--controller-manager', '/controller_manager'],
         output='screen'
     )
 
