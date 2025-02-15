@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-humble-joy \
     python3-transforms3d \
     ros-humble-robot-state-publisher \
+    ros-humble-rtabmap-ros \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies

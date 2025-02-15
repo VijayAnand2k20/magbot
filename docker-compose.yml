@@ -3,10 +3,10 @@ services:
   magbot:
     build: .
     environment:
-      # - DISPLAY=${DISPLAY}
-      - DISPLAY=$WAYLAND_DISPLAY
-      - QT_X11_NO_MITSHM=1
-      - ROS_DOMAIN_ID=0
+      - DISPLAY=${DISPLAY}
+      # - DISPLAY=$WAYLAND_DISPLAY
+      # - QT_X11_NO_MITSHM=1
+      # - ROS_DOMAIN_ID=0
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/root/.Xauthority
@@ -28,10 +28,10 @@ services:
   gazebo:
     build: .
     environment:
-      # - DISPLAY=${DISPLAY}
-      - DISPLAY=$WAYLAND_DISPLAY
-      - QT_X11_NO_MITSHM=1
-      - ROS_DOMAIN_ID=0
+      - DISPLAY=${DISPLAY}
+      # - DISPLAY=$WAYLAND_DISPLAY
+      # - QT_X11_NO_MITSHM=1
+      # - ROS_DOMAIN_ID=0
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/root/.Xauthority

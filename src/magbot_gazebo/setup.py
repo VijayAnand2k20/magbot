@@ -27,7 +27,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-
+            'save_bag_to_csv = magbot_gazebo.save_bag_to_csv:main',
         ],
     },
 )
