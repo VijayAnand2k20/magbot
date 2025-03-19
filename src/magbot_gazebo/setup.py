@@ -28,6 +28,7 @@ setup(
     entry_points={
         'console_scripts': [
             'save_bag_to_csv = magbot_gazebo.save_bag_to_csv:main',
+            'cmd_vel_to_joy = magbot_gazebo.cmd_vel_to_joy:main'
         ],
     },
 )

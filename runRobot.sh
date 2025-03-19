@@ -13,3 +13,5 @@ ros2 run magbot_input_interfacing magbot_keyboard_interfacing
 ros2 run rviz2 rviz2
 
 ros2 launch slam_toolbox online_async_launch.py params_file:=./src/magbot_gazebo/config/mapper_params_online_async.yaml use_sim_time:=true
+
+ros2 run robot_localization ekf_node --ros-args --params-file ./src/magbot_gazebo/config/ekf.yaml
