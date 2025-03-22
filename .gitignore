@@ -3,11 +3,12 @@
 **/__pycache__
 build/
 install/
-log/*
+# log/*
+log/
 .vscode/*
 src/.vscode/*
 *.pyc
 *.pyo
 *.pyd
 .Docker
-.tests/.env/
+.tests/.env
