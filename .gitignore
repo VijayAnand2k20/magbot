@@ -10,3 +10,4 @@ src/.vscode/*
 *.pyo
 *.pyd
 .Docker
+.tests/.env/
