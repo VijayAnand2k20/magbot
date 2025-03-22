@@ -6,9 +6,9 @@ ekf_filter_node:
 
     # Frame settings
     map_frame: map
-    odom_frame: odom
+    odom_frame: odom_filtered
     base_link_frame: base_link
-    world_frame: odom  # Change to "map" if using a global reference
+    world_frame: odom_filtered  # Change to "map" if using a global reference
 
     # Input sensor topics
     odom0: /odom
