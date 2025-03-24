@@ -18,3 +18,8 @@ ros2 run magbot_input_interfacing magbot_keyboard_interfacing
 
 # No need for now
 # ros2 launch slam_toolbox online_async_launch.py params_file:=./src/magbot_gazebo/config/mapper_params_online_async.yaml use_sim_time:=true
+
+
+# Command to analyze 
+# Bag Command: ros2 bag record -o combined_localization1 /odom /odometry/filtered /ground_truth /tf
+# Analysis Command: evo_traj bag2 combined_localization1     /odom     /odometry/filtered     /ground_truth     --ref /ground_truth -s --plot
