@@ -22,4 +22,12 @@ ros2 run magbot_input_interfacing magbot_keyboard_interfacing
 
 # Command to analyze 
 # Bag Command: ros2 bag record -o combined_localization1 /odom /odometry/filtered /ground_truth /tf
-# Analysis Command: evo_traj bag2 combined_localization1     /odom     /odometry/filtered     /ground_truth     --ref /ground_truth -s --plot
+
+# Analysis Commands: 
+# evo_traj bag2 combined_localization1     /odom     /odometry/filtered     /ground_truth     --ref /ground_truth -s --plot
+
+# evo_ape bag2 combined_localization3 /ground_truth /odom
+# evo_ape bag2 combined_localization3 /ground_truth /odometry/filtered
+
+# evo_rpe bag2 combined_localization3 /ground_truth /odom
+# evo_rpe bag2 combined_localization3 /ground_truth /odometry/filtered
