@@ -1,0 +1,39 @@
+ekf_filter_node:
+  ros__parameters:
+    frequency: 30.0  # EKF update rate (Hz)
+    two_d_mode: true  # Enforce 2D mode (ignores Z, roll, pitch)
+    publish_tf: true  # Publish transformation
+
+    # Frame settings
+    map_frame: world
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: world  # Change to "map" if using a global reference
+
+    # Input sensor topics
+    odom0: /odom
+    odom0_config: [true, true, false,  # X, Y, Z
+                       false, false, true,  # Roll, Pitch, Yaw
+                       true, true, false,  # Vx, Vy, Vz
+                       false, false, true,  # Vroll, Vpitch, Vyaw
+                       false, false, false] # Ax, Ay, Az
+
+    imu0: /magbot/imu
+    imu0_config: [false, false, false,  # X, Y, Z
+                  true, true, true,  # Roll, Pitch, Yaw
+                  false, false, false,  # Vx, Vy, Vz
+                  false, false, true,  # Vroll, Vpitch, Vyaw
+                  false, false, false]  # Ax, Ay, Az
+
+    imu0_differential: false
+    imu0_remove_gravitational_acceleration: true
+
+    # Output fused odometry
+    odometry_output_topic: /odometry/filtered
+    alpha: 0.001
+    # Defaults to 0 if unspecified.
+    kappa: 0.0
+
+    # [ADVANCED, UKF ONLY] The beta variable relates to the distribution of the state vector. Again, it's probably best to
+    # leave this alone if you're uncertain. Defaults to 2 if unspecified.
+    beta: 2.0

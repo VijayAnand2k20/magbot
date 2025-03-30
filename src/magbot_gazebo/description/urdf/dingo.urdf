@@ -670,6 +670,26 @@
             </noise>
           </z>
         </linear_acceleration>
+        <orientation>
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.001</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.001</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.001</stddev>
+            </noise>
+          </z>
+        </orientation>
       </imu>
       <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
         <ros>
@@ -689,7 +709,7 @@
       </ros>
       <frame_name>world</frame_name>
       <body_name>base_link</body_name>
-      <update_rate>200.0</update_rate>
+      <update_rate>30.0</update_rate>
       <gaussian_noise>0.01</gaussian_noise>
     </plugin>
   </gazebo>
